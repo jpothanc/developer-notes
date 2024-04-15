@@ -2,9 +2,7 @@
 
 Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to allow extra items.
 
-### Flex Container Properties
-
-#### `display`
+### Flex Cheat Sheet
 
 ```css
 /* display flex items horizontally */
@@ -51,53 +49,48 @@ Flexbox is a one-dimensional layout method for laying out items in rows or colum
     flex-wrap:wrap;
 }
 
-/* leaves a gap between each flex item */
+/* leaves a gap between each flex item 
+   use row-gap for leaving gap between rows.
+   use gap if you want to leave gap between columns and rows.
+*/
 |[] [] []| 
 .container{
     display:flex;
     column-gap:20px;
 }
 
-/* leaves a gap between each flex item */
+/* align-self is used by the flex children to align itself with in the flex container. 
+*/
 |
-[] 
-
-[] 
-
-[]
+[][] 
+    [] 
 | 
-.container{
+
+.box-3{
     display:flex;
-    flex-direction:column;
-    row-gap:20px;
+    align-self:end;
 }
 
+/* align right most flex item to extreme right  */
+|[][]   []| 
+.box-3{
+    display:flex;
+    margin-left:auto;
+}
 
+/* sizing flex items propotionally */
+|[1][ 2 ][ 3 ]|
 
+.box-1{
+    flex:1
+}
+.box-2{
+    flex:2
+}
+.box-3{
+    flex:3
+}
 ```
 
 
 
-- `flex-direction`: This defines the direction items are placed in the container. It can be `row`, `row-reverse`, `column`, or `column-reverse`.
-
-- `flex-wrap`: By default, flex items will all try to fit onto one line. You can change that with `nowrap`, `wrap`, or `wrap-reverse`.
-
-- `justify-content`: This defines the alignment along the main axis. It can be `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, or `space-evenly`.
-
-- `align-items`: This defines the default behavior for how items are laid out along the cross axis. It can be `stretch`, `flex-start`, `flex-end`, `center`, or `baseline`.
-
-- `align-content`: This aligns a flex container's lines within the flex container when there is extra space in the cross-axis. It can be `stretch`, `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, or `space-evenly`.
-
-### Flex Item Properties
-
-- `order`: By default, flex items are laid out in the source order. However, the `order` property can control the order in which they appear in the flex container.
-
-- `flex-grow`: This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion.
-
-- `flex-shrink`: This defines the ability for a flex item to shrink if necessary.
-
-- `flex-basis`: This defines the default size of an element before the remaining space is distributed.
-
-- `align-self`: This allows the default alignment (or the one specified by `align-items`) to be overridden for individual flex items.
-
-Please note that there are more properties available, but these are some of the basics to get you started.
