@@ -4,7 +4,79 @@ Flexbox is a one-dimensional layout method for laying out items in rows or colum
 
 ### Flex Container Properties
 
-- `display`: This defines a flex container. It can be `flex` or `inline-flex`.
+#### `display`
+
+```css
+/* display flex items horizontally */
+|[][][]|
+.container{
+    display:flex;
+}
+/* display flex items vertically */
+|
+[]
+[]
+[]
+|
+.container{
+    display:flex;
+    flex-direction:column;
+}
+
+/* align horizontally */
+| [][][] |
+.container{
+    display:flex;
+    justify-content:center;
+}
+
+/* align vertically */
+| 
+
+[][][] 
+
+|
+.container{
+    display:flex;
+    align-items:center;
+}
+
+/* wrap flex items when window size changes */
+|
+[][][][]
+[][][]
+| 
+.container{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* leaves a gap between each flex item */
+|[] [] []| 
+.container{
+    display:flex;
+    column-gap:20px;
+}
+
+/* leaves a gap between each flex item */
+|
+[] 
+
+[] 
+
+[]
+| 
+.container{
+    display:flex;
+    flex-direction:column;
+    row-gap:20px;
+}
+
+
+
+```
+
+
 
 - `flex-direction`: This defines the direction items are placed in the container. It can be `row`, `row-reverse`, `column`, or `column-reverse`.
 
