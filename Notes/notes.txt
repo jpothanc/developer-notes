@@ -1,52 +1,10 @@
-Vikas, a key SME and deputy owner of the misssion critical Front Office Systems like Goman and Trade Reportinng Engine. He also has additional responsblities to manage the Equities Reporting platform called IRIS.He has shown unwavering dedication to his projects, consistently going above and beyond to ensure operational excellence.He has proven his loyalty to the bank through years of committed service, contributing to its long-term success. With his deep business and technical  knowledge and robust leadership skills, Vikas is well-prepared to take on higher-level challenges.
-
-
-
-
-Innovation:
-
-Vikas was instrumental in transforming our legacy Trade Reporting platform into a microservices architecture. This redesign streamlined business workflows and significantly reduced complex dependencies on Oracle Advanced Queues, enhancing both system efficiency and scalability.
-
-Stream lined the reporting platform to limit the number of report generation failures.
-
-
-Total Cost of Ownership (TCO), and Technical Debt Management:
-Successfully achieved substantial cost reductions and enhanced operational efficiencies by strategically decommissioning outdated legacy applications, including Piranha, Fast Booker, and Risk Trader. This initiative is part of an ongoing effort to manage and reduce technical debt.
-
-Business Workflow Optimization:
-Conducted thorough analyses and developed detailed workflow enhancements for the PT platform, significantly improving process efficiency. These improvements were implemented as part of the Miki Direct Trading project.
-
-Efficiency and Interoperability Enhancement:
-As part of our comprehensive desktop strategy, we upgraded the PT systems to ensure seamless communication with other systems. This enhancement has led to better utilization of desktop workspace and improved interoperability across platforms.
-
-
-
-Collaboration:
-Actively collaborates with Support and Traders to ensure smooth business operations. 
-
-Works closely with regional support teams and global peers to address local requirements and achieve global consistency, ensuring a cohesive strategy that aligns with organizational goals.
-
-Actively partners with the Business Analyst (BA) to fully grasp project requirements, craft detailed use cases, and design robust technical solutions. He has successfully led critical regulatory projects, including Mifid,Fidessa Booking changes and BCAN, delivering flawless results without any issues. His meticulous approach and dedication ensured compliance and operational excellence throughout these initiatives.
-
-
-
-Accoutablity:
-
-V exemplifies accountability, stepping up during team attrition to ensure uninterrupted business operations. He efficiently handled additional responsibilities, promptly addressing queries from business and support teams. His proactive and reliable approach during critical times underscores his dedication and ability to maintain high service standards under pressure.
-
-He self-driven individual who requires minimal supervision, ensuring that his deliverables are consistently smooth and degfect free. His independent work ethic and meticulous attention to detail make him a dependable asset, capable of executing tasks with precision and efficiency. 
-
-
-
-
-V deep technical knowledge and extensive experience with the Front Office Systems make him a critical asset for taking on higher-level strategic roles.
-
-He has demonstrated leadership by successfully managing crucial projects and stepping up to take on additional responsibilities during periods of team attrition, ensuring no disruption to business operations.
-
-Has played a pivotal role in transforming legacy systems into modern microservices architecture and streamlining business workflows.
-
-His self-driven nature and minimal need for supervision ensure that his deliverables are consistently high-quality and completed efficiently.
-
-V's ability to work effectively with diverse teams and stakeholders, including business analysts and regional support teams, facilitates enhanced productivity and aligns with organizational goals.
-
-His ongoing efforts to refine his skills through continuous learning, such as acquiring new certifications and mastering emerging technologies, demonstrate his commitment to both personal and organizational growth.
+Price Calculation Innovation: Engineered a Live Index Level pricing tool for the Delta One desk, critically enhancing trading accuracy and efficiency.
+Strategic Application Integration: Led the swift and successful integration of the "Horizon" trading application across five key Asian markets.
+Platform Re-Architecture Leadership: Directed a comprehensive overhaul of the Program Trading platform, substantially improving its functionality and adoption.
+Cross-Institution Integration: Ensured seamless CS and UBS integration for Program Trading Flow, achieving near-zero production incidents.
+Regulatory Compliance Project Management: Oversaw the HKSE HKIDR regulatory project, from analysis to deployment, ensuring full compliance with system updates.
+Interoperability Enhancement: Facilitated content sharing between trading applications using the FDC3 protocol, optimizing functionality.
+Algorithm Optimization: Revamped the Fill Proportion algorithm for Program Trading, resolving multi-year issues through meticulous testing.
+Operational Flow Simplification: Re-engineered trading processes to allow direct transactions on the Program Trading platform, significantly cutting time to market.
+Legacy System Modernization: Transitioned a legacy booking application in Japan to a lean, microservice-based architecture.
+Innovative Trading Tool Development: Invented a virtual basket concept and a pioneering heat map tool, both of which have greatly aided trader decision-making.
