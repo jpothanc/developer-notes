@@ -1,10 +1,1 @@
-Price Calculation Innovation: Engineered a Live Index Level pricing tool for the Delta One desk, critically enhancing trading accuracy and efficiency.
-Strategic Application Integration: Led the swift and successful integration of the "Horizon" trading application across five key Asian markets.
-Platform Re-Architecture Leadership: Directed a comprehensive overhaul of the Program Trading platform, substantially improving its functionality and adoption.
-Cross-Institution Integration: Ensured seamless CS and UBS integration for Program Trading Flow, achieving near-zero production incidents.
-Regulatory Compliance Project Management: Oversaw the HKSE HKIDR regulatory project, from analysis to deployment, ensuring full compliance with system updates.
-Interoperability Enhancement: Facilitated content sharing between trading applications using the FDC3 protocol, optimizing functionality.
-Algorithm Optimization: Revamped the Fill Proportion algorithm for Program Trading, resolving multi-year issues through meticulous testing.
-Operational Flow Simplification: Re-engineered trading processes to allow direct transactions on the Program Trading platform, significantly cutting time to market.
-Legacy System Modernization: Transitioned a legacy booking application in Japan to a lean, microservice-based architecture.
-Innovative Trading Tool Development: Invented a virtual basket concept and a pioneering heat map tool, both of which have greatly aided trader decision-making.
+
