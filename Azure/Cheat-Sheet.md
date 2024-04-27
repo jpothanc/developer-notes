@@ -114,6 +114,68 @@ This table provides a concise and comparative view of the three main cloud servi
 | Geo-Zone-Redundant Storage (GZRS)                | Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region. | 16 nines (enhanced durability across zones and regions)                                                             |
 | Read-Access Geo-Zone-Redundant Storage (RA-GZRS) | Same as GZRS, but with read-only access to the data in the secondary location.                                       | 16 nines (plus read access from secondary, best for critical applications requiring maximum availability)           |
 
+### Storage Type
+
+| Storage Type       | Description                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Blob Storage       | Ideal for storing large amounts of unstructured data such as text or binary data, often used for images, videos, documents, backups, and application data.                |
+| File Storage       | Offers fully managed file shares in the cloud that can be accessed via the industry standard Server Message Block (SMB) protocol, suitable for enterprise applications.   |
+| Queue Storage      | Provides cloud messaging between application components, enabling scalable and loosely coupled communication, often used for building decoupled architectures.            |
+| Table Storage      | NoSQL datastore for structured data, capable of storing massive amounts of data for web applications, capable of handling flexible datasets with dynamic schemas.         |
+| Disk Storage       | Persistent, high-performance managed block storage for Azure Virtual Machines, available in SSD and HDD formats, used as the OS disk or data disk for VMs.                |
+| Azure Data Lake    | Scalable data lake storage for big data analytics solutions, capable of storing and analyzing massive amounts of structured and unstructured data with high throughput.   |
+| Azure Backup       | Offers scalable, secure, and cost-effective offsite data protection for on-premises data and workloads, ensuring data resilience and disaster recovery capabilities.      |
+| Azure Archive Blob | Provides ultra-low-cost, secure, and durable storage for rarely accessed data, suitable for long-term retention of backup data, archival data, and regulatory compliance. |
+
+### Blob Storage Tier
+
+| Storage Tier | Description                                                          |
+| ------------ | -------------------------------------------------------------------- |
+| Hot          | Optimized for frequently accessed data.                              |
+| Cool         | Suitable for infrequently accessed data stored for at least 30 days. |
+| Cold         | Designed for infrequently accessed data stored for at least 90 days. |
+| Archive      | Intended for rarely accessed data stored for at least 180 days.      |
+
+### Azure Migration Services
+
+| Migration Service                | Description                                                                                                                                                                                   |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Azure Migrate                    | Offers a centralized hub to assess and migrate on-premises servers, databases, and applications to Azure, providing insights, right-sizing recommendations, and migration guidance.           |
+| Azure Site Recovery              | Provides disaster recovery and migration capabilities for on-premises VMware, Hyper-V, and physical servers, enabling replication and failover to Azure with minimal downtime.                |
+| Azure Database Migration Service | Simplifies database migration to Azure, supporting heterogeneous migrations of on-premises databases to Azure data platforms like Azure SQL Database and Azure Database for MySQL/PostgreSQL. |
+| Azure Data Box                   | Offers secure and efficient data transfer to Azure, allowing large amounts of data to be shipped physically using ruggedized appliances, ideal for offline or limited-bandwidth scenarios.    |
+| Azure Data Box Disk              | Provides a portable, SSD-based solution for offline data transfer to Azure, suitable for smaller data volumes with faster turnaround times compared to traditional data shipping methods.     |
+| Azure Data Box Heavy             | Enables high-volume, offline data transfer to Azure using ruggedized, high-capacity storage appliances, offering a reliable and efficient method for migrating large datasets to the cloud.   |
+| Azure Data Box Edge              | Combines edge compute capabilities with offline data transfer, allowing data preprocessing and analytics at the edge before securely transferring data to Azure for further processing.       |
+
+### Azure Databox Use cases
+
+| Use Case                                  | Description                                                                                                                                                                                                           |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Large-scale Data Migration                | Azure Data Box facilitates the migration of large volumes of data to Azure by providing ruggedized appliances for offline data transfer, offering a faster and more efficient method than online transfers.           |
+| Limited Bandwidth Environments            | In scenarios where internet bandwidth is limited or unreliable, Azure Data Box provides a reliable solution for transferring data to Azure, allowing organizations to overcome connectivity challenges.               |
+| Datacenter Migration                      | Organizations can use Azure Data Box to migrate data from on-premises datacenters to Azure, streamlining the transition to the cloud and minimizing downtime associated with online data transfers.                   |
+| Offline Data Transfer                     | For environments with strict security or compliance requirements that restrict online data transfers, Azure Data Box offers an offline method for securely transferring data to Azure without internet access.        |
+| Data Preprocessing at the Edge            | Azure Data Box Edge enables edge compute capabilities, allowing organizations to preprocess and analyze data at the edge before transferring it to Azure, optimizing data processing workflows.                       |
+| Temporary Data Storage                    | Organizations can leverage Azure Data Box for temporary data storage during migration projects, providing a secure and scalable solution for storing data before it is transferred to Azure storage services.         |
+| Media and Entertainment Workflows         | Azure Data Box is suitable for media and entertainment workflows that involve large video files, graphics, or other multimedia assets, enabling efficient transfer of content to Azure for processing and analysis.   |
+| Backup and Disaster Recovery              | Using Azure Data Box for backup and disaster recovery purposes allows organizations to create offline backups of critical data, ensuring data availability and resilience against data loss or disasters.             |
+| Remote or Offshore Locations              | In remote or offshore locations with limited connectivity to the Azure cloud, Azure Data Box offers a practical solution for transferring data, enabling organizations to overcome geographic and network challenges. |
+| Data Migration for IoT and Edge Computing | Azure Data Box supports data migration for IoT and edge computing environments, facilitating the transfer of sensor data, telemetry, and other IoT-generated data to Azure for analysis and insights.                 |
+
+### Azure File Movement Options
+
+| Movement Option             | Description                                                                                                                                                                                           |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Azure Data Factory          | Azure Data Factory provides data integration and orchestration service for automating data movement and transformation. It supports various data sources and destinations, including Azure storage.   |
+| Azure Data Box              | Azure Data Box offers ruggedized appliances for offline data transfer, allowing organizations to transfer large volumes of data securely to Azure storage, overcoming bandwidth limitations.          |
+| AzCopy                      | AzCopy is a command-line utility for copying data to and from Azure storage. It supports high-performance data transfer with features like parallelism, resuming, and encryption.                     |
+| Azure Storage Sync          | Azure Storage Sync enables bi-directional synchronization of files between on-premises servers and Azure storage, providing a seamless way to keep files in sync across distributed environments.     |
+| Azure File Sync             | Azure File Sync synchronizes files between on-premises file servers and Azure file shares, allowing organizations to centralize file storage in Azure while maintaining local access and performance. |
+| Azure Import/Export Service | Azure Import/Export Service allows organizations to securely ship large volumes of data on physical storage devices to Azure datacenters for offline data transfer and ingestion into Azure storage.  |
+| Azure Logic Apps            | Azure Logic Apps provides workflow automation and integration capabilities, allowing users to create automated workflows for file movement and processing across various cloud services.              |
+| Azure Storage Explorer      | Azure Storage Explorer is a graphical tool for managing Azure storage accounts and files. It provides an intuitive interface for uploading, downloading, and managing files within Azure storage.     |
+
 ## 7-Azure identity, access, and security
 
 | Category                            | Feature                                        | Description                                                                                                                                                               |
