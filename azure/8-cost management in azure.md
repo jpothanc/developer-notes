@@ -1,20 +1,16 @@
-# Azure Cost Factors Cheat Sheet
-
-## Overview
+# Azure Cost Management
 
 Azure shifts development costs from capital expenses (CapEx) for infrastructure to operational expenses (OpEx) by renting infrastructure. The OpEx costs are impacted by multiple factors which include:
 
-| Cost Factor           | Description                                                                                    | Impact Details                                                                                               | Examples                                         |
-|-----------------------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-| **Resource Type**     | The specific Azure services used (VMs, storage, etc.).                                         | Costs vary based on the type and settings of each resource, as well as the region they are deployed in.     | - VM pricing varies by size, region, and OS.<br>- Storage accounts differ in cost based on access tiers and redundancy options. |
-| **Consumption**       | The amount of resources consumed.                                                              | Pay-as-you-go pricing model, with optional reserved capacity for discounts.                                  | - Higher compute usage increases costs.<br>- Reserved instances provide up to 72% discount. |
-| **Maintenance**       | Management of Azure resources.                                                                  | Proper resource management can prevent unnecessary costs from idle or unoptimized resources.                 | - Regularly reviewing and shutting down unused VMs can reduce costs. |
-| **Geography**         | The region where resources are deployed.                                                        | Costs vary due to regional differences in electricity, labor, taxes, and data transfer fees.                | - Deploying services in regions with lower costs.<br>- Data transfer costs are lower when kept within the same region. |
-| **Subscription Type** | The type of Azure subscription used.                                                            | Different subscriptions can include various pricing structures and discounts.                                | - Azure Free accounts offer limited free resources.<br>- Enterprise agreements may include different cost structures. |
-| **Azure Marketplace** | Third-party services and products purchased through Azure.                                      | Costs include Azure services and third-party vendor charges.                                                 | - Purchasing pre-configured VMs or specialized services from third-party vendors. |
-| **Network Traffic**   | Data transfer volumes and locations.                                                            | Costs associated with data moving in and out of Azure datacenters, especially across regions.                | - Inbound data to Azure is generally free, but outbound data incurs charges based on the amount and destination. |
-
-
+| Cost Factor           | Description                                                | Impact Details                                                                                          | Examples                                                                                                                        |
+| --------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Resource Type**     | The specific Azure services used (VMs, storage, etc.).     | Costs vary based on the type and settings of each resource, as well as the region they are deployed in. | - VM pricing varies by size, region, and OS.<br>- Storage accounts differ in cost based on access tiers and redundancy options. |
+| **Consumption**       | The amount of resources consumed.                          | Pay-as-you-go pricing model, with optional reserved capacity for discounts.                             | - Higher compute usage increases costs.<br>- Reserved instances provide up to 72% discount.                                     |
+| **Maintenance**       | Management of Azure resources.                             | Proper resource management can prevent unnecessary costs from idle or unoptimized resources.            | - Regularly reviewing and shutting down unused VMs can reduce costs.                                                            |
+| **Geography**         | The region where resources are deployed.                   | Costs vary due to regional differences in electricity, labor, taxes, and data transfer fees.            | - Deploying services in regions with lower costs.<br>- Data transfer costs are lower when kept within the same region.          |
+| **Subscription Type** | The type of Azure subscription used.                       | Different subscriptions can include various pricing structures and discounts.                           | - Azure Free accounts offer limited free resources.<br>- Enterprise agreements may include different cost structures.           |
+| **Azure Marketplace** | Third-party services and products purchased through Azure. | Costs include Azure services and third-party vendor charges.                                            | - Purchasing pre-configured VMs or specialized services from third-party vendors.                                               |
+| **Network Traffic**   | Data transfer volumes and locations.                       | Costs associated with data moving in and out of Azure datacenters, especially across regions.           | - Inbound data to Azure is generally free, but outbound data incurs charges based on the amount and destination.                |
 
 ### Resource Type
 

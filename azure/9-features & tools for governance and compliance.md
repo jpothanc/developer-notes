@@ -1,4 +1,4 @@
-## Overview:
+# Azure Governance and Compliance
 
 Microsoft Purview is a family of data governance, risk, and compliance solutions that provides a unified view of your data across on-premises, multicloud, and software-as-a-service environments.
 
@@ -27,7 +27,6 @@ Microsoft Purview consists of two main solution areas:
 - Provides a secure environment for data consumers.
 - Generates insights into data storage and usage.
 - Manages access to data securely and at scale.
-
 
 ---
 

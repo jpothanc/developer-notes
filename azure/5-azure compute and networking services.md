@@ -1,7 +1,5 @@
 # Azure Virtual Machines (VMs)
 
-## Overview
-
 Azure Virtual Machines offer the flexibility of virtualization without the need to buy and maintain the physical hardware that runs it. You can configure, manage, and maintain the OS and software.
 
 | Service                                  | Key Features                                                                                           | Common Use Cases                                                                                                                                                                                            |

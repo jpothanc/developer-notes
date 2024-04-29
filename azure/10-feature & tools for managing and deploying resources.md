@@ -1,6 +1,4 @@
-# Azure Management and Deployment Cheat Sheet
-
-## Overview
+# Azure Management and Deployment
 
 This module introduces various Azure features and tools that assist in managing and deploying resources across Azure, on-premises, and multicloud environments.
 
