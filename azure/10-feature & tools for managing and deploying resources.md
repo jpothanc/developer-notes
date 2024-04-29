@@ -2,16 +2,16 @@
 
 This module introduces various Azure features and tools that assist in managing and deploying resources across Azure, on-premises, and multicloud environments.
 
-| Feature               | Description                                                              | Example Code Snippet                                                                                                       |
-| --------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| **Azure Portal**      | Web-based UI for managing Azure resources.                               | GUI-based, no code snippet.                                                                                                |
-| **Azure Cloud Shell** | Browser-based shell experience, supports Azure PowerShell and Azure CLI. | `# Access Cloud Shell in Azure Portal`                                                                                     |
-| **Azure PowerShell**  | Manages Azure resources using PowerShell cmdlets.                        | `powershell\nConnect-AzAccount\nNew-AzVm -ResourceGroupName 'MyResourceGroup' -Name 'MyVm' -Location 'East US'\n`          |
-| **Azure CLI**         | Command-line tool that uses Bash commands for Azure management.          | `bash\naz login\naz group create --name MyResourceGroup --location "East US"\n`                                            |
-| **Azure Arc**         | Extends Azure management to hybrid and multicloud environments.          | `bash\naz connectedmachine connect --resource-group MyResourceGroup --name MyServer --location "East US"\n`                |
-| **ARM Templates**     | Declarative JSON format for deploying Azure resources.                   | `json\n{"type": "Microsoft.Compute/virtualMachines", "apiVersion": "2019-12-01", "name": "MyVm", "location": "East US"}\n` |
-| **Bicep**             | Language for deploying Azure resources, simpler than ARM Templates.      | `bicep\nresource myVm 'Microsoft.Compute/virtualMachines@2020-06-01' = { name: 'MyVm', location: 'East US' }\n`            |
-
+| Feature               | Description                                                              |
+| --------------------- | ------------------------------------------------------------------------ |
+| **Azure Portal**      | Web-based UI for managing Azure resources.                               |
+| **Azure Cloud Shell** | Browser-based shell experience, supports Azure PowerShell and Azure CLI. |
+| **Azure PowerShell**  | Manages Azure resources using PowerShell cmdlets.                        |
+| **Azure CLI**         | Command-line tool that uses Bash commands for Azure management.          |
+| **Azure Arc**         | Extends Azure management to hybrid and multicloud environments.          |
+| **ARM Templates**     | Declarative JSON format for deploying Azure resources.                   |
+| **Bicep**             | Language for deploying Azure resources, simpler than ARM Templates.      |
+ 
 ## Tools for Interacting with Azure
 
 ### Azure Portal
