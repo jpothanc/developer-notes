@@ -1,6 +1,6 @@
-## Cloud Computing Benefits in Azure
+# Cloud Computing Benefits in Azure
 
-### High Availability and Scalability
+## High Availability and Scalability
 
 #### High Availability
 
