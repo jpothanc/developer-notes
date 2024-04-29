@@ -49,7 +49,7 @@
       {
         "name": "react-hooks",
         "description": "useState, useEffect, useMemo....",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "link": "react-hooks.md"
       }
     ],
     "java": [
@@ -132,6 +132,18 @@
       {
         "name": "fetch api",
         "description": "how to use fetch api",
+        "link": "default.md"
+      }
+    ],
+    "testing": [
+      {
+        "name": "xunit tricks",
+        "description": "xunit tricks and tips",
+        "link": "default.md"
+      },
+      {
+        "name": "java web api testing",
+        "description": "how to test java web api",
         "link": "default.md"
       }
     ],
