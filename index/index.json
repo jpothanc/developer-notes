@@ -3,7 +3,7 @@
     "tags": [
       {
         "name": "web",
-        "bgColor": "#2962FF"
+        "bgColor": "#00897B"
       },
       {
         "name": ".net",
@@ -28,11 +28,12 @@
         "textColor": "black"
       },
       {
-        "name": "architecture"
+        "name": "architecture",
+        "bgColor": "#757575"
       },
       {
         "name": "azure",
-        "bgColor": "#9C27B0"
+        "bgColor": "#007FFF"
       }
     ],
     "web": [
