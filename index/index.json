@@ -152,7 +152,7 @@
       {
         "name": "solid-principles",
         "description": "solid principles concepts",
-        "link": "default.md"
+        "link": "architecture/solid-principles.md"
       },
       {
         "name": "clean-architecture",

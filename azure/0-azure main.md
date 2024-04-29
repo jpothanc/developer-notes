@@ -27,7 +27,12 @@
 - **Review All Modules**: Spend time on each module, ensuring you understand the concepts and can apply them.
 - **Hands-On Practice**: Use the Azure free account to get hands-on experience with the services discussed.
 - **Mock Tests**: Take practice exams to familiarize yourself with the format and type of questions.
-- **Study Groups**: Consider joining a study group to gain insights from discussions and shared learning experiences.
 - **Revision Notes**: Make concise notes for quick revision before the exam.
 
 This table format provides a clear and organized view of the topics to focus on for each module, aiding in systematic exam preparation.
+
+### Links
+
+[Prepare for the Azure Fundamentals Exam](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification#certification-prepare-for-the-exam)
+
+[Azure Fundamentals Practice Assessment](https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/practice/assessment?assessment-type=practice&assessmentId=23&practice-assessment-type=certification)
