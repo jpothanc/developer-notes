@@ -111,22 +111,22 @@
     "azure": [
       {
         "name": "azure",
-        "description": "async await etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Azure/azure.md"
+        "description": "az-900 topics",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/azure.md"
+      },
+      {
+        "name": "cheat-sheet",
+        "description": "quick notes",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/0-azure cheat-sheet.md"
       },
       {
         "name": "Cloud Computing Essentials",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Azure/1-Cloud computing.md"
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/1-cloud computing.md"
       },
       {
         "name": "Benefits in Azure",
         "description": "linq queries",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Azure/2-Benefits of using cloud services.md"
-      },
-      {
-        "name": "Cheat Sheet1",
-        "description": "All in one",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Azure/Cheat-Sheet.md"
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Aazurezure/2-benefits of using cloud services.md"
       }
     ]
   }
