@@ -112,7 +112,7 @@
       {
         "name": "azure",
         "description": "az-900 topics",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/azure.md"
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/0-azure main.md"
       },
       {
         "name": "cheat-sheet",
@@ -120,13 +120,59 @@
         "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/0-azure cheat-sheet.md"
       },
       {
-        "name": "Cloud Computing Essentials",
+        "name": "cloud",
+        "description": "computing essentials",
         "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/1-cloud computing.md"
       },
       {
-        "name": "Benefits in Azure",
-        "description": "linq queries",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/Aazurezure/2-benefits of using cloud services.md"
+        "name": "benefits",
+        "description": "cloud services",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/2-benefits of using cloud services.md"
+      },
+      {
+        "name": "service types",
+        "description": "Iaas, Paas, Saas etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/3-cloud service types.md"
+      },
+      {
+        "name": "components",
+        "description": "resources, groups, etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/4-core architectural components of azure.md"
+      },
+      {
+        "name": "compute and networking",
+        "description": "vms,containers etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/5-azure compute and networking services.md"
+      },
+      {
+        "name": "storage services",
+        "description": "LRS,ZRS,GRS etc ",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/6-azure storage Services.md"
+      },
+      {
+        "name": "identity, access, and security",
+        "description": "entra id, auth, etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/7-azure identity, access, and security.md"
+      },
+      {
+        "name": "cost management",
+        "description": "price and tco etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/8-cost management in azure.md"
+      },
+      {
+        "name": "compliance",
+        "description": "purview & policies etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/9-features & tools for governance and compliance"
+      },
+      {
+        "name": "deploy resources",
+        "description": "arm,cli,bicep etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/10-feature & tools for managing and deploying resources.md"
+      },
+      {
+        "name": "monitoring tools",
+        "description": "advisor,monitor etc",
+        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/11-monitoring tools in azure.md"
       }
     ]
   }
