@@ -1,5 +1,7 @@
 # devnotes
 
+## _devnotes remember everything so you don’t have to..._
+
 Welcome to devnotes, where programming syntax and concepts stick around longer than your morning coffee’s warmth!.
 
 I know how easy it is to forget a piece of syntax or lose grip on a complex concept, especially when you're juggling multiple programming languages.
@@ -11,5 +13,3 @@ I know how easy it is to forget a piece of syntax or lose grip on a complex conc
 That's why i've created this, to help me quickly refresh my memory with concise notes and guidelines on a wide range of programming topics. From Python's intricate functions to the delicate art of CSS, this provides easy-to-digest information that strengthens your coding skills and boosts your memory.
 
 It's like having a cheat sheet that's always there when you need it, ensuring you spend less time relearning and more time doing what you do best—coding!
-
-<span style="color: yellow;">_devnotes remember everything so you don’t have to._</span>
