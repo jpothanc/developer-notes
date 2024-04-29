@@ -54,6 +54,11 @@
     ],
     "java": [
       {
+        "name": "collections",
+        "description": "collections and usage",
+        "link": "default.md"
+      },
+      {
         "name": "rxjava",
         "description": "reactive programming",
         "link": "default.md"
@@ -76,6 +81,11 @@
     ],
     ".net": [
       {
+        "name": "collections",
+        "description": "collections and usage",
+        "link": "default.md"
+      },
+      {
         "name": "async-programming",
         "description": "async await...",
         "link": "default.md"
@@ -93,6 +103,11 @@
     ],
     "python": [
       {
+        "name": "collections",
+        "description": "collections and usage",
+        "link": "default.md"
+      },
+      {
         "name": "microservice",
         "description": "how to write microservices in python",
         "link": "default.md"
@@ -105,6 +120,18 @@
       {
         "name": "libraries",
         "description": "how to publish libraries",
+        "link": "default.md"
+      }
+    ],
+    "javascript": [
+      {
+        "name": "collections",
+        "description": "collections and usage",
+        "link": "default.md"
+      },
+      {
+        "name": "fetch api",
+        "description": "how to use fetch api",
         "link": "default.md"
       }
     ],
