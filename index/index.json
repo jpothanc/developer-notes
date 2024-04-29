@@ -172,7 +172,7 @@
       {
         "name": "monitoring tools",
         "description": "advisor,monitor etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/11-monitoring tools in azure.md"
+        "link": "azure/11-monitoring tools in azure.md"
       }
     ]
   }
