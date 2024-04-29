@@ -206,7 +206,7 @@
       {
         "name": "compliance",
         "description": "purview & policies...",
-        "link": "azure/9-features & tools for governance and compliance"
+        "link": "azure/9-features & tools for governance and compliance.md"
       },
       {
         "name": "deploy resources",
