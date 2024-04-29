@@ -78,7 +78,7 @@
       {
         "name": "async-programming",
         "description": "async await...",
-        "link": "web-styling/css/css_containers.md"
+        "link": "default.md"
       },
       {
         "name": "csharp features",
@@ -131,7 +131,7 @@
       },
       {
         "name": "service types",
-        "description": "Iaas, Paas, Saas...",
+        "description": "iaas, paas, paas...",
         "link": "azure/3-cloud service types.md"
       },
       {
@@ -146,7 +146,7 @@
       },
       {
         "name": "storage services",
-        "description": "LRS, ZRS, GRS, blobs, files, disks... ",
+        "description": "lrs, zrs, grs, blobs, files, disks... ",
         "link": "azure/6-azure storage Services.md"
       },
       {
