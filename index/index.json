@@ -32,7 +32,7 @@
       },
       {
         "name": "azure",
-        "bgColor": "purple"
+        "bgColor": "#9C27B0"
       }
     ],
     "web": [
