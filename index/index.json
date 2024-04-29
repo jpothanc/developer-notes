@@ -39,135 +39,135 @@
       {
         "name": "containers",
         "description": "flex,grids,etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_containers.md"
+        "link": "web-styling/css/css_containers.md"
       },
       {
         "name": "layout-hacks",
         "description": "quick css layout hacks",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       },
       {
         "name": "react-hooks",
         "description": "useState, useEffect, useMemo etc.",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       }
     ],
     "java": [
       {
         "name": "rxjava",
         "description": "flex,grids,etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_containers.md"
+        "link": "web-styling/css/css_containers.md"
       },
       {
         "name": "graphgql",
         "description": "quick css layout hacks",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       },
       {
         "name": "async-programming",
         "description": "completable future etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       },
       {
         "name": "lamdas",
         "description": "functional interface",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       }
     ],
     ".net": [
       {
         "name": "async-programming",
         "description": "async await etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_containers.md"
+        "link": "web-styling/css/css_containers.md"
       },
       {
         "name": "csharp",
         "description": "quick css layout hacks",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       },
       {
         "name": "linq",
         "description": "linq queries",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       }
     ],
     "python": [
       {
         "name": "microservice",
         "description": "async await etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_containers.md"
+        "link": "web-styling/css/css_containers.md"
       },
       {
         "name": "python",
         "description": "quick css layout hacks",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       },
       {
         "name": "linq",
         "description": "linq queries",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/web-styling/css/css_layout_hacks.md"
+        "link": "web-styling/css/css_layout_hacks.md"
       }
     ],
     "azure": [
       {
         "name": "azure",
         "description": "az-900 topics",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/0-azure main.md"
+        "link": "azure/0-azure main.md"
       },
       {
         "name": "cheat-sheet",
         "description": "quick notes",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/0-azure cheat-sheet.md"
+        "link": "azure/0-azure cheat-sheet.md"
       },
       {
         "name": "cloud",
         "description": "computing essentials",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/1-cloud computing.md"
+        "link": "azure/1-cloud computing.md"
       },
       {
         "name": "benefits",
         "description": "cloud services",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/2-benefits of using cloud services.md"
+        "link": "azure/2-benefits of using cloud services.md"
       },
       {
         "name": "service types",
         "description": "Iaas, Paas, Saas etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/3-cloud service types.md"
+        "link": "azure/3-cloud service types.md"
       },
       {
         "name": "components",
         "description": "resources, groups, etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/4-core architectural components of azure.md"
+        "link": "azure/4-core architectural components of azure.md"
       },
       {
         "name": "compute and networking",
         "description": "vms,containers etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/5-azure compute and networking services.md"
+        "link": "azure/5-azure compute and networking services.md"
       },
       {
         "name": "storage services",
         "description": "LRS,ZRS,GRS etc ",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/6-azure storage Services.md"
+        "link": "azure/6-azure storage Services.md"
       },
       {
         "name": "identity, access, and security",
         "description": "entra id, auth, etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/7-azure identity, access, and security.md"
+        "link": "azure/7-azure identity, access, and security.md"
       },
       {
         "name": "cost management",
         "description": "price and tco etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/8-cost management in azure.md"
+        "link": "azure/8-cost management in azure.md"
       },
       {
         "name": "compliance",
         "description": "purview & policies etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/9-features & tools for governance and compliance"
+        "link": "azure/9-features & tools for governance and compliance"
       },
       {
         "name": "deploy resources",
         "description": "arm,cli,bicep etc",
-        "link": "https://raw.githubusercontent.com/jpothanc/developer-notes/main/azure/10-feature & tools for managing and deploying resources.md"
+        "link": "azure/10-feature & tools for managing and deploying resources.md"
       },
       {
         "name": "monitoring tools",
