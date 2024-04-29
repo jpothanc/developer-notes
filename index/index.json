@@ -56,22 +56,22 @@
       {
         "name": "rxjava",
         "description": "reactive programming",
-        "link": "web-styling/css/css_containers.md"
+        "link": "default.md"
       },
       {
         "name": "graphgql",
         "description": "graphql concepts",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "link": "default.md"
       },
       {
         "name": "async-programming",
         "description": "completable future...",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "link": "default.md"
       },
       {
         "name": "lamdas",
         "description": "functional interfaces...",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "link": "default.md"
       }
     ],
     ".net": [
@@ -82,30 +82,47 @@
       },
       {
         "name": "csharp features",
-        "description": "c# language useful features",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "description": "latest c# language useful features",
+        "link": "default.md"
       },
       {
         "name": "linq",
         "description": "linq queries",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "link": "default.md"
       }
     ],
     "python": [
       {
         "name": "microservice",
-        "description": "async await...",
-        "link": "web-styling/css/css_containers.md"
+        "description": "how to write microservices in python",
+        "link": "default.md"
       },
       {
         "name": "python",
-        "description": "quick css layout hacks",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "description": "language concepts",
+        "link": "default.md"
       },
       {
-        "name": "linq",
-        "description": "linq queries",
-        "link": "web-styling/css/css_layout_hacks.md"
+        "name": "libraries",
+        "description": "how to publish libraries",
+        "link": "default.md"
+      }
+    ],
+    "architecture": [
+      {
+        "name": "solid-principles",
+        "description": "solid principles concepts",
+        "link": "default.md"
+      },
+      {
+        "name": "clean-architecture",
+        "description": "clean architecture concepts",
+        "link": "default.md"
+      },
+      {
+        "name": "onion architecture",
+        "description": "onion architecture concepts",
+        "link": "default.md"
       }
     ],
     "azure": [
