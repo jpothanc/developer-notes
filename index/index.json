@@ -32,6 +32,10 @@
         "bgColor": "#757575"
       },
       {
+        "name": "design patterns",
+        "bgColor": "#5D4037"
+      },
+      {
         "name": "azure",
         "bgColor": "#007FFF"
       }
@@ -162,6 +166,23 @@
       {
         "name": "onion architecture",
         "description": "onion architecture concepts",
+        "link": "default.md"
+      }
+    ],
+    "design patterns": [
+      {
+        "name": "singleton",
+        "description": "creational",
+        "link": "default.md"
+      },
+      {
+        "name": "chain of responsibility",
+        "description": "behavioral",
+        "link": "default.md"
+      },
+      {
+        "name": "facade",
+        "description": "structural",
         "link": "default.md"
       }
     ],
