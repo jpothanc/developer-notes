@@ -1,12 +1,5 @@
 # Azure Monitoring
 
-| Service               | Purpose                                                                                          | Features / Capabilities                                                                                      |
-|-----------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| **Azure Advisor**     | Optimizes Azure resources for reliability, security, performance, operational excellence, and cost. | Provides actionable recommendations, available via Azure portal and API.                                      |
-| **Azure Service Health** | Tracks the health and status of Azure services and resources.                                   | Includes Azure Status, Service Health, and Resource Health for comprehensive monitoring.                      |
-| **Azure Monitor**    | Collects, analyzes, and acts on telemetry data from Azure and other environments.               | Features Azure Log Analytics, Alerts, and Application Insights for detailed monitoring and diagnostics.        |
-
-
 ## Azure Advisor
 
 - **Purpose**: Optimizes and enhances performance, security, and cost-efficiency of Azure resources.

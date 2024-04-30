@@ -1,24 +1,4 @@
-# Azure Directory Services
-
-| Category                            | Feature                                        | Description                                                                                                                                                               |
-| ----------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **General**                         | **Microsoft Entra ID**                         | Cloud-based identity and access management service that allows signing into Microsoft and developed cloud applications. Also helps maintain on-premises Active Directory. |
-|                                     | **Active Directory on Windows Server**         | Provides identity and access management, managed by the organization for on-premises environments.                                                                        |
-| **Features of Microsoft Entra ID**  | **Authentication**                             | Verification of identity to access applications, includes self-service password reset, multifactor authentication (MFA), and more.                                        |
-|                                     | **Single Sign-On (SSO)**                       | Simplifies access by using one identity across multiple applications.                                                                                                     |
-|                                     | **Application Management**                     | Manage both cloud and on-premises apps.                                                                                                                                   |
-|                                     | **Device Management**                          | Supports device registration and management through Microsoft Intune.                                                                                                     |
-| **Integration**                     | **Microsoft Entra Connect**                    | Synchronizes user identities between on-premises Active Directory and Microsoft Entra ID.                                                                                 |
-| **Microsoft Entra Domain Services** | **Managed Domain Services**                    | Provides domain join, group policy, LDAP, Kerberos/NTLM authentication. Managed by Azure, reducing the need for on-premises domain controller maintenance.                |
-|                                     | **Synchronization**                            | One-way synchronization from Microsoft Entra ID to Microsoft Entra Domain Services.                                                                                       |
-| **Azure Authentication Methods**    | **Standard Passwords, SSO, MFA, Passwordless** | Includes various authentication methods such as standard passwords, single sign-on, multifactor authentication, and passwordless options.                                 |
-|                                     | **Windows Hello for Business**                 | Biometric and PIN credentials for secure access.                                                                                                                          |
-|                                     | **Microsoft Authenticator App**                | Turns a mobile phone into a strong, passwordless credential.                                                                                                              |
-|                                     | **FIDO2 Security Keys**                        | Unphishable, standards-based passwordless authentication method.                                                                                                          |
-| **Azure External Identities**       | **External Identity**                          | Identity outside your organization used to securely interact.                                                                                                             |
-|                                     | **B2B Collaboration**                          | Use preferred identity to sign in to enterprise applications.                                                                                                             |
-|                                     | **B2B Direct Connect**                         | Two-way trust with another Microsoft Entra organization.                                                                                                                  |
-|                                     | **Azure AD B2C**                               | Identity and access management for consumer-facing applications.                                                                                                          |
+# Azure Identity, Access, and Security
 
 ## Microsoft Entra ID
 

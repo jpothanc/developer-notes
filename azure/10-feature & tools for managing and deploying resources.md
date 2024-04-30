@@ -2,16 +2,6 @@
 
 This module introduces various Azure features and tools that assist in managing and deploying resources across Azure, on-premises, and multicloud environments.
 
-| Feature               | Description                                                              |
-| --------------------- | ------------------------------------------------------------------------ |
-| **Azure Portal**      | Web-based UI for managing Azure resources.                               |
-| **Azure Cloud Shell** | Browser-based shell experience, supports Azure PowerShell and Azure CLI. |
-| **Azure PowerShell**  | Manages Azure resources using PowerShell cmdlets.                        |
-| **Azure CLI**         | Command-line tool that uses Bash commands for Azure management.          |
-| **Azure Arc**         | Extends Azure management to hybrid and multicloud environments.          |
-| **ARM Templates**     | Declarative JSON format for deploying Azure resources.                   |
-| **Bicep**             | Language for deploying Azure resources, simpler than ARM Templates.      |
- 
 ## Tools for Interacting with Azure
 
 ### Azure Portal

@@ -1,15 +1,36 @@
-# Azure storage accounts
+# Azure Storage
 
-| Azure Storage Service                            | Explanation                                                                                                          | Durability in Nines                                                                                                 |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Locally Redundant Storage (LRS)                  | Stores data within a single physical location in the data center to protect against hardware failures.               | 11 nines (suitable for non-critical data)                                                                           |
-| Zone-Redundant Storage (ZRS)                     | Spreads data across multiple storage units in one or more data centers within a region.                              | 12 nines (good for critical regional data)                                                                          |
-| Geo-Redundant Storage (GRS)                      | Replicates data to a secondary region that is hundreds of miles away from the primary region.                        | 16 nines (recommended for essential data needing geographic redundancy)                                             |
-| Read-Access Geo-Redundant Storage (RA-GRS)       | Same as GRS, but provides read-only access to the data in the secondary location.                                    | 16 nines (plus read access from secondary, ideal for applications needing fast read access during regional outages) |
-| Geo-Zone-Redundant Storage (GZRS)                | Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region. | 16 nines (enhanced durability across zones and regions)                                                             |
-| Read-Access Geo-Zone-Redundant Storage (RA-GZRS) | Same as GZRS, but with read-only access to the data in the secondary location.                                       | 16 nines (plus read access from secondary, best for critical applications requiring maximum availability)           |
+## Azure storage redundancy
 
-## Azure Storage Platform Overview
+### Locally Redundant Storage (LRS)
+
+- Explanation: Stores data within a single physical location in the data center to protect against hardware failures.
+- Durability in Nines: 11 nines (suitable for non-critical data)
+
+### Zone-Redundant Storage (ZRS)
+
+- Explanation: Spreads data across multiple storage units in one or more data centers within a region.
+- Durability in Nines: 12 nines (good for critical regional data)
+
+### Geo-Redundant Storage (GRS)
+
+- Explanation: Replicates data to a secondary region that is hundreds of miles away from the primary region.
+- Durability in Nines: 16 nines (recommended for essential data needing geographic redundancy)
+
+### Read-Access Geo-Redundant Storage (RA-GRS)
+
+- Explanation: Same as GRS, but provides read-only access to the data in the secondary location.
+- Durability in Nines: 16 nines (plus read access from secondary, ideal for applications needing fast read access during regional outages)
+
+### Geo-Zone-Redundant Storage (GZRS)
+
+- Explanation: Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region.
+- Durability in Nines: 16 nines (enhanced durability across zones and regions)
+
+### Read-Access Geo-Zone-Redundant Storage (RA-GZRS)
+
+- Explanation: Same as GZRS, but with read-only access to the data in the secondary location.
+- Durability in Nines: 16 nines (plus read access from secondary, best for critical applications requiring maximum availability)
 
 ### Services
 
