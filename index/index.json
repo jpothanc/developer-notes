@@ -29,7 +29,8 @@
       },
       {
         "name": "architecture",
-        "bgColor": "#757575"
+        "bgColor": "#757575",
+        "link": "default.md"
       },
       {
         "name": "design patterns",
