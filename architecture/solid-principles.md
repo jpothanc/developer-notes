@@ -4,7 +4,7 @@ Solid principles refer to a set of guidelines for object-oriented programming (O
 
 1. S - Single Responsibility Principle (SRP): A class should have only one reason to change, meaning it should have only one responsibility or single purpose.
 
-```C#
+```csharp
 // Bad example: A class responsible for both data access and validation
 
 internal class OrderService
@@ -51,7 +51,7 @@ internal class OrderValidator
 
 2. O - Open/Closed Principle (OCP): A class should be open for extension but closed for modification, allowing for new functionality without modifying existing code.
 
-```C#
+```csharp
 // Bad example: Modifying existing code to add a new payment method
 public class PaymentProcessor
 {
