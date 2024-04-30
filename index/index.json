@@ -209,7 +209,7 @@
       },
       {
         "name": "components",
-        "description": "resources, groups, sunscriptions...",
+        "description": "resources, groups, subscriptions...",
         "link": "azure/4-core architectural components of azure.md"
       },
       {
