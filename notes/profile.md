@@ -83,3 +83,15 @@ Independently mastered the bank's PaaS hosted on OpenShift, conducted trainings 
 An active participant in hackathons, having won one and adeptly transformed innovative concepts from these competitions into viable, profitable business solutions.
 
 Chaired Sprint planning meetings with Business and
+
+He manages front office applications, effectively coordinating the release of essential and regulatory projects, and upholds exemplary ownership of the production environment. He is a strong leader, committed to continuous improvement and learning.
+
+Spearheaded the integration of Bloomberg into the Order Management application, enhancing trader efficiency by managing discussions, understanding technical aspects, and directing the solution's development and deployment.
+
+Designed 'Vision', a cloud-native product to enhance trade visibility and address audit points.He led its deployment in APAC, supported its adoption in EMEA, and successfully closed additional audit issues.
+
+Independently developed a cloud-native reference data service using the cache-aside pattern to boost system resiliency. This self-initiated project, which included features like health checks, scheduled cache loading, and dynamic indexing, was completed in just two weeks during his vacation.
+
+Developed "Product Store," a cloud-hosted service that consolidates multiple product data sources into a single resilient API for stocks, futures, indexes, and more. This service enabled the decommissioning of a problematic legacy system over 20 years old.
+
+He developed a range of common libraries for various functions to eliminate duplication and promote resiliency and reuse within the team.
