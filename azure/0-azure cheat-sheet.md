@@ -1,5 +1,9 @@
 ## 1-Cloud computing
 
+---
+
+---
+
 | Term                            | Description                                                                                                                        |
 | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | **Cloud Computing**             | The delivery of computing services over the internet, including virtual machines, storage, databases, networking, IoT, ML, and AI. |
@@ -32,6 +36,10 @@
 | **Pricing Models**              |                                                                                                                                    |
 | Pay-as-you-go                   | Charges based on actual usage, offering flexibility and operational cost management.                                               |
 
+---
+
+---
+
 # Cloud Concepts
 
 | Concept           | Description                                                                                                                                                                                                           |
@@ -45,6 +53,10 @@
 | Data Redundancy   | The duplication of data, or the ability to store data in multiple locations to ensure reliability and availability during instances of hardware failure or other issues.                                              |
 | Multi-Tenancy     | The ability of a cloud service to serve multiple customers (tenants) using the same infrastructure without tenants being able to access each other's data.                                                            |
 | Resource Pooling  | The provider's computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand. |
+
+---
+
+---
 
 ## 3-Cloud service types
 
@@ -89,6 +101,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Pay-as-you-go                   | Charges based on actual usage, offering flexibility and operational cost management.                                                                            |
 | **Overview**                    | This overview provides a foundational understanding of cloud computing, highlighting how resources are managed, deployed, and charged in the cloud environment. |
 
+---
+
+---
+
 ## 4-Core architectural components of Azure
 
 | Section                                          | Description                                                                                                                                                                                  | Details                                                                                                                                                                                                                                                         |
@@ -100,6 +116,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | **Azure Physical and Management Infrastructure** | Organized network of datacenters with robust support for resilience and redundancy.                                                                                                          | - **Datacenters and Regions**: Ensure global coverage and operational continuity.<br>- **Availability Zones and Region Pairs**: Enhance disaster recovery capabilities.                                                                                         |
 | **Azure Hierarchical Structure**                 | Detailed breakdown from Azure account to individual resources.                                                                                                                               | - **Management Groups**: Manage policy across subscriptions.<br>- **Subscriptions**: Contain resource groups for billing and policy application.<br>- **Resource Groups**: Manage related resources together.<br>- **Resources**: Individual service instances. |
 | **Usage Scenarios**                              | Demonstrates Azure's flexibility in supporting various operational needs.                                                                                                                    | Suitable for isolated environments for development, testing, security, and compliance across different organizational structures.                                                                                                                               |
+
+---
+
+---
 
 ## 5-Azure compute and networking services
 
@@ -117,6 +137,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | **Azure ExpressRoute**                   | Provides a private connection to Azure services, bypassing the public internet.                        | - **Private connectivity**: Direct connection to Azure without going through the public internet.<br>- **High-speed connections**: Up to 100 Gbps.<br>- **Global reach**: Connect facilities globally.      |
 | **Azure DNS**                            | Manages DNS names and records using Azure infrastructure.                                              | - **High availability**: Uses Azure's global network.<br>- **Security features**: Includes Azure RBAC and activity logs.<br>- **Integration**: With Azure management tools.                                 |
 
+---
+
+---
+
 ## 6-Azure storage Services
 
 | Azure Storage Service                            | Explanation                                                                                                          | Durability in Nines                                                                                                 |
@@ -127,6 +151,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Read-Access Geo-Redundant Storage (RA-GRS)       | Same as GRS, but provides read-only access to the data in the secondary location.                                    | 16 nines (plus read access from secondary, ideal for applications needing fast read access during regional outages) |
 | Geo-Zone-Redundant Storage (GZRS)                | Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region. | 16 nines (enhanced durability across zones and regions)                                                             |
 | Read-Access Geo-Zone-Redundant Storage (RA-GZRS) | Same as GZRS, but with read-only access to the data in the secondary location.                                       | 16 nines (plus read access from secondary, best for critical applications requiring maximum availability)           |
+
+---
+
+---
 
 ### Storage Type
 
@@ -141,6 +169,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Azure Backup       | Offers scalable, secure, and cost-effective offsite data protection for on-premises data and workloads, ensuring data resilience and disaster recovery capabilities.      |
 | Azure Archive Blob | Provides ultra-low-cost, secure, and durable storage for rarely accessed data, suitable for long-term retention of backup data, archival data, and regulatory compliance. |
 
+---
+
+---
+
 ### Blob Storage Tier
 
 | Storage Tier | Description                                                          |
@@ -149,6 +181,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Cool         | Suitable for infrequently accessed data stored for at least 30 days. |
 | Cold         | Designed for infrequently accessed data stored for at least 90 days. |
 | Archive      | Intended for rarely accessed data stored for at least 180 days.      |
+
+---
+
+---
 
 ### Azure Migration Services
 
@@ -161,6 +197,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Azure Data Box Disk              | Provides a portable, SSD-based solution for offline data transfer to Azure, suitable for smaller data volumes with faster turnaround times compared to traditional data shipping methods.     |
 | Azure Data Box Heavy             | Enables high-volume, offline data transfer to Azure using ruggedized, high-capacity storage appliances, offering a reliable and efficient method for migrating large datasets to the cloud.   |
 | Azure Data Box Edge              | Combines edge compute capabilities with offline data transfer, allowing data preprocessing and analytics at the edge before securely transferring data to Azure for further processing.       |
+
+---
+
+---
 
 ### Azure Databox Use cases
 
@@ -177,6 +217,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Remote or Offshore Locations              | In remote or offshore locations with limited connectivity to the Azure cloud, Azure Data Box offers a practical solution for transferring data, enabling organizations to overcome geographic and network challenges. |
 | Data Migration for IoT and Edge Computing | Azure Data Box supports data migration for IoT and edge computing environments, facilitating the transfer of sensor data, telemetry, and other IoT-generated data to Azure for analysis and insights.                 |
 
+---
+
+---
+
 ### Azure File Movement Options
 
 | Movement Option             | Description                                                                                                                                                                                           |
@@ -189,6 +233,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Azure Import/Export Service | Azure Import/Export Service allows organizations to securely ship large volumes of data on physical storage devices to Azure datacenters for offline data transfer and ingestion into Azure storage.  |
 | Azure Logic Apps            | Azure Logic Apps provides workflow automation and integration capabilities, allowing users to create automated workflows for file movement and processing across various cloud services.              |
 | Azure Storage Explorer      | Azure Storage Explorer is a graphical tool for managing Azure storage accounts and files. It provides an intuitive interface for uploading, downloading, and managing files within Azure storage.     |
+
+---
+
+---
 
 ## 7-Azure identity, access, and security
 
@@ -212,6 +260,10 @@ This table provides a concise and comparative view of the three main cloud servi
 |                                     | **B2B Direct Connect**                         | Two-way trust with another Microsoft Entra organization.                                                                                                                  |
 |                                     | **Azure AD B2C**                               | Identity and access management for consumer-facing applications.                                                                                                          |
 
+---
+
+---
+
 ## 8-Cost Management in Azure
 
 | Cost Factor           | Description                                                | Impact Details                                                                                          | Examples                                                                                                                        |
@@ -223,6 +275,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | **Subscription Type** | The type of Azure subscription used.                       | Different subscriptions can include various pricing structures and discounts.                           | - Azure Free accounts offer limited free resources.<br>- Enterprise agreements may include different cost structures.           |
 | **Azure Marketplace** | Third-party services and products purchased through Azure. | Costs include Azure services and third-party vendor charges.                                            | - Purchasing pre-configured VMs or specialized services from third-party vendors.                                               |
 | **Network Traffic**   | Data transfer volumes and locations.                       | Costs associated with data moving in and out of Azure datacenters, especially across regions.           | - Inbound data to Azure is generally free, but outbound data incurs charges based on the amount and destination.                |
+
+---
+
+---
 
 ## 9-Features and tools in Azure for governance and compliance
 
@@ -238,6 +294,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | Purpose of Resource Locks             | Resource Locks, Prevent, Delete, ReadOnly                               | - **Resource Locks**: Prevent accidental deletion or changes to Azure resources. - **Prevent (Delete)**: Stop authorized users from deleting resources. - **ReadOnly**: Stop deletion or updates; akin to Reader role.                                                                                                                                      |
 | Purpose of Service Trust Portal       | Service Trust Portal, Security, Privacy, Compliance                     | - **Service Trust Portal**: Microsoft's platform offering access to security, privacy, and compliance resources. - **Authentication**: Sign-in required with Microsoft Entra organization account. - **Non-disclosure Agreement**: Review and acceptance needed for compliance materials.                                                                   |
 
+---
+
+---
+
 ## 10-Feature & Tools for Managing and Deploying Azure Resources
 
 | Feature               | Description                                                              | Example Code Snippet                                                                                                       |
@@ -249,6 +309,10 @@ This table provides a concise and comparative view of the three main cloud servi
 | **Azure Arc**         | Extends Azure management to hybrid and multicloud environments.          | `bash\naz connectedmachine connect --resource-group MyResourceGroup --name MyServer --location "East US"\n`                |
 | **ARM Templates**     | Declarative JSON format for deploying Azure resources.                   | `json\n{"type": "Microsoft.Compute/virtualMachines", "apiVersion": "2019-12-01", "name": "MyVm", "location": "East US"}\n` |
 | **Bicep**             | Language for deploying Azure resources, simpler than ARM Templates.      | `bicep\nresource myVm 'Microsoft.Compute/virtualMachines@2020-06-01' = { name: 'MyVm', location: 'East US' }\n`            |
+
+---
+
+---
 
 ## 11-Monitoring Tools in Azure
 
