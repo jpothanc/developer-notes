@@ -193,11 +193,6 @@
         "link": "azure/0-azure main.md"
       },
       {
-        "name": "cheat-sheet",
-        "description": "quick reference",
-        "link": "azure/0-azure cheat-sheet.md"
-      },
-      {
         "name": "cloud basics",
         "description": "public, private, hybrid...",
         "link": "azure/1-cloud computing.md"
@@ -251,6 +246,11 @@
         "name": "monitoring tools",
         "description": "advisor, monitor, service health...",
         "link": "azure/11-monitoring tools in azure.md"
+      },
+      {
+        "name": "cheat-sheet",
+        "description": "quick reference",
+        "link": "azure/0-azure cheat-sheet.md"
       }
     ]
   }
