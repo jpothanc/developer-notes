@@ -1,6 +1,12 @@
 # Solid Principles
 
-Solid principles refer to a set of guidelines for object-oriented programming (OOP) and software design. The acronym SOLID was introduced by Robert C. Martin and stands for:
+As a junior developer, I often questioned the value of design patterns and was likely naive about writing scalable and flexible code. Over time, as I worked on larger projects, my perspective evolved. I discovered Robert C. Martin's (Uncle Bob) insightful and valuable speeches on YouTube, covering a wide range of topics such as Clean Code, Architecture, Agile Software Development, Ethics in Software Development, and SOLID Principles. He is a humorous and relatable orator who truly connects with his audience. If you haven't read or listened to him, I highly recommend doing so.
+
+Today's topic is the SOLID principles, a set of guidelines that every software developer should strive to incorporate into their daily practice.
+
+The SOLID principles are five design guidelines in object-oriented programming intended to make software designs more maintainable, scalable, reusable, testable, and flexible. These principles not only promote high-quality code but also facilitate a more adaptive and efficient development process, accommodating changes and growth with less friction.
+
+This article is motivated by the observation that many senior programmers still routinely flout these principles, often resulting in duplicated and inflexible code.
 
 1. S - Single Responsibility Principle (SRP): A class should have only one reason to change, meaning it should have only one responsibility or single purpose.
 
