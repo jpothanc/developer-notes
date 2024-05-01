@@ -160,6 +160,11 @@
         "link": "architecture/solid-principles.md"
       },
       {
+        "name": "zen of python",
+        "description": "pythonic way of coding",
+        "link": "architecture/zen-of-python.md"
+      },
+      {
         "name": "clean-architecture",
         "description": "clean architecture concepts",
         "link": "default.md"
