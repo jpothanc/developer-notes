@@ -3,42 +3,50 @@
     "tags": [
       {
         "name": "web",
-        "bgColor": "#00897B"
+        "bgColor": "#00897B",
+        "link": "blank.md"
       },
       {
         "name": ".net",
-        "bgColor": "#512BD4"
+        "bgColor": "#512BD4",
+        "link": "blank.md"
       },
       {
         "name": "java",
-        "bgColor": "#ED4357"
+        "bgColor": "#ED4357",
+        "link": "blank.md"
       },
       {
         "name": "python",
-        "bgColor": "#3776AB"
+        "bgColor": "#3776AB",
+        "link": "blank.md"
       },
       {
         "name": "javascript",
         "bgColor": "#F7DF1E",
-        "textColor": "black"
+        "textColor": "black",
+        "link": "blank.md"
       },
       {
         "name": "testing",
         "bgColor": "#4CAF50",
-        "textColor": "black"
+        "textColor": "black",
+        "link": "blank.md"
       },
       {
         "name": "architecture",
         "bgColor": "#757575",
-        "link": "default.md"
+        "link": "architecture/index.md"
       },
       {
         "name": "design patterns",
-        "bgColor": "#5D4037"
+        "bgColor": "#5D4037",
+        "link": "blank.md"
       },
       {
         "name": "azure",
-        "bgColor": "#007FFF"
+        "bgColor": "#007FFF",
+        "link": "blank.md"
       }
     ],
     "web": [
