@@ -119,12 +119,12 @@
       {
         "name": "collections",
         "description": "collections and usage",
-        "link": "python/microservices.md"
+        "link": "default.md"
       },
       {
         "name": "microservice",
         "description": "how to write microservices in python",
-        "link": "default.md"
+        "link": "python/microservices.md"
       },
       {
         "name": "python",

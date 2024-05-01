@@ -241,8 +241,6 @@ def health_check():
     return jsonify({'status': 'UP'}), 200
 ```
 
-# Implementation omitted for brevity
-
 Tests
 Implemented basic tests to demonstrate API endpoint testing.
 
