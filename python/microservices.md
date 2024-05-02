@@ -1,6 +1,6 @@
 # Discovering Python Through Microservice Development
 
-As someone deeply rooted in the .Net and Java ecosystems, my programming journey has been full of strongly typed languages and enterprise-level frameworks. However, the allure of Python, with its simplicity and versatility, recently captured my interest. Eager to understand the essence of Python and how it contrasts with the familiar territories of .Net and Java, I embarked on a project that would not only allow me to peek into Python but also to apply it in a real-world scenario. This project took the form of a microservice, aptly named “Equity Store,” designed to fetch stock information by code and exchange.
+As someone deeply rooted in the .Net and Java ecosystems, my programming journey has been full of strongly typed languages and enterprise-level frameworks. However, the allure of Python, with its simplicity and versatility, recently captured my interest. Eager to understand the essence of Python and how it contrasts with the familiar territories of .Net and Java, I embarked on a project that would not only allow me to peek into Python but also to apply it in a real-world scenario.
 
 With “Equity Store,” my objective was to explore Python’s capabilities in microservice architecture, addressing various critical aspects that are pivotal in microservice development, regardless of the programming language used.
 
