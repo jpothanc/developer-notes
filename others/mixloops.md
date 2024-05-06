@@ -60,42 +60,6 @@
   }
   ```
 
-### `while` Loop
-
-- **C#**
-  ```csharp
-  int index = 0;
-  while (index < numbers.Length)
-  {
-      Console.WriteLine(numbers[index]);
-      index++;
-  }
-  ```
-- **Java**
-  ```java
-  int index = 0;
-  while (index < numbers.length)
-  {
-      System.out.println(numbers[index]);
-      index++;
-  }
-  ```
-- **Python**
-  ```python
-  index = 0
-  while index < len(numbers):
-      print(numbers[index])
-      index += 1
-  ```
-- **JavaScript**
-  ```javascript
-  let index = 0;
-  while (index < numbers.length) {
-    console.log(numbers[index]);
-    index++;
-  }
-  ```
-
 ### Functional Methods
 
 - **C#**
