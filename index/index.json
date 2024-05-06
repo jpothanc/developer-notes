@@ -9,23 +9,23 @@
       {
         "name": ".net",
         "bgColor": "#512BD4",
-        "link": "blank.md"
+        "link": ".net/overview.md"
       },
       {
         "name": "java",
         "bgColor": "#ED4357",
-        "link": "blank.md"
+        "link": "java/overview.md"
       },
       {
         "name": "python",
         "bgColor": "#3776AB",
-        "link": "blank.md"
+        "link": "python/overview.md"
       },
       {
         "name": "javascript",
         "bgColor": "#F7DF1E",
         "textColor": "black",
-        "link": "blank.md"
+        "link": "javascript/overview.md"
       },
       {
         "name": "testing",
