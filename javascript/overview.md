@@ -108,7 +108,9 @@ JavaScript is traditionally an interpreted language but modern engines use Just-
 # Execute a JavaScript file directly with Node.js
 node example.js
 ```
+
 ## JavaScript Compilation Process
+
 ```
 
 Source Code (.js files)
@@ -124,6 +126,8 @@ Just-In-Time (JIT) Compilation
 │
 ▼
 Optimized Machine Code
+
+```
 
 ```
 
