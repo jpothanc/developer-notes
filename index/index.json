@@ -47,6 +47,11 @@
         "name": "azure",
         "bgColor": "#007FFF",
         "link": "blank.md"
+      },
+      {
+        "name": "others",
+        "bgColor": "#006064",
+        "link": "blank.md"
       }
     ],
     "web": [
@@ -265,6 +270,13 @@
         "name": "cheat-sheet",
         "description": "quick reference",
         "link": "azure/0-azure cheat-sheet.md"
+      }
+    ],
+    "others": [
+      {
+        "name": "loops",
+        "description": "looping in different languages",
+        "link": "mixloops.md"
       }
     ]
   }
