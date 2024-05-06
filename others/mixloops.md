@@ -134,6 +134,4 @@
   numbers.map((num) => console.log(num));
   ```
 
-## Keywords
 
-Tag11, Cheat Sheet, C#, Java, Python, JavaScript, Arrays, Iteration
