@@ -119,7 +119,7 @@
       {
         "name": "collections",
         "description": "collections and usage",
-        "link": "default.md"
+        "link": "python/connections.md"
       },
       {
         "name": "microservice",
@@ -141,7 +141,7 @@
       {
         "name": "collections",
         "description": "collections and usage",
-        "link": "default.md"
+        "link": "javascript/connections.md"
       },
       {
         "name": "fetch api",
