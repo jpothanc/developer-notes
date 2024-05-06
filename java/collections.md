@@ -1,155 +1,214 @@
-# Collection classes
+# Java Collections
 
+Java provides various collections for storing and managing data, each with specific features and uses.
 
-`Collection Interface`:This is one of the root interfaces in the collection hierarchy.
+## Arrays
 
-| Collection Type | Interface   | Key Implementations                               | Characteristics                                                                           | Performance                                   | Concurrency                                               |
-|-----------------|-------------|--------------------------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------|------------------------------------------------------------|
-| List            | List        | ArrayList, LinkedList, Vector, Stack             | Ordered collection, allows duplicates, provides positional access.                        | Random access fast (ArrayList), slow insertions/deletions (LinkedList) | Vector, Stack are synchronized                             |
-| Set             | Set         | HashSet, LinkedHashSet, TreeSet                  | No duplicates, provides various ordering options (insertion-order, natural ordering).     | Fast access (HashSet), ordered access (TreeSet) | Not synchronized; use `ConcurrentSkipListSet` for a concurrent version |
-| Queue           | Queue       | LinkedList, PriorityQueue, ArrayDeque            | Holds elements prior to processing, typically ordered by FIFO (First In, First Out).      | Good at enqueue/dequeue operations            | Not synchronized; use `ConcurrentLinkedQueue` or `BlockingQueue` implementations like `ArrayBlockingQueue`, `LinkedBlockingQueue` for concurrent versions |
-| Deque           | Deque       | ArrayDeque, LinkedList                           | Double-ended queue allowing element insertion and removal from both ends.                 | Fast at both ends (ArrayDeque)                | Not synchronized; use `ConcurrentLinkedDeque` for a concurrent version |
-| Map             | Map         | HashMap, LinkedHashMap, TreeMap, Hashtable       | Key-value pairs, keys are unique, various ordering and threading options.                 | Fast access (HashMap), ordered access (TreeMap) | HashMap, LinkedHashMap not synchronized, Hashtable synchronized; use `ConcurrentHashMap` or `ConcurrentSkipListMap` for concurrent versions |
-| Concurrent Map  | ConcurrentMap | ConcurrentHashMap, ConcurrentSkipListMap       | Key-value pairs with thread-safe concurrency features.                                    | High concurrency performance                  | Fully concurrent without locking (ConcurrentHashMap) or part-locked (ConcurrentSkipListMap) |
-
-
-## Methods of Iterating Over an ArrayList
-- Using an Iterator
-- Using an Enhanced For-Loop (For-Each Loop)
-- Using a Traditional For-Loop
-- Using a ListIterator
-- Using the forEach() 
-
-| **Method**            | **Pros**                                              | **Cons**                                                   |
-|-----------------------|-------------------------------------------------------|------------------------------------------------------------|
-| **Iterator**          | - Safely remove elements during iteration.<br>- Good for generic code that works on any Collection. | - Slightly more verbose than for-each loop.<br>- Easy to forget calling `next()` causing infinite loops. |
-| **Enhanced For-Loop** | - Concise and easy to use.<br>- Less error-prone as it eliminates the possibility of index out of bounds errors. | - Cannot modify the list (add/remove elements) during iteration.<br>- No access to the index. |
-| **Traditional For-Loop** | - Access to the index.<br>- Ability to modify the list by adding or removing elements based on the index. | - Verbose.<br>- Risk of `IndexOutOfBoundsException` if not careful with bounds. |
-| **ListIterator**      | - Bidirectional iteration (next and previous).<br>- Add, remove, and replace elements during iteration. | - More complex than simple iteration.<br>- Overhead of understanding additional methods. |
-| **forEach() method**  | - Very concise, especially with lambda expressions.<br>- Separates business logic from iteration logic. | - Cannot modify the list directly (e.g., remove elements).<br>- No access to the index. |
+Arrays are ordered collections that can hold any type of value.
 
 ```java
-// Using an Iterator
-Iterator<String> iterator = list.iterator();
-while (iterator.hasNext()) {
-    String element = iterator.next();
-    if (element.equals("delete")) {
-        iterator.remove();
-    }
-}
-//Using an Enhanced For-Loop (For-Each Loop)
-for (String element : list) {
+// Initialize ArrayList with data
+List<Integer> arrayListWithData = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+// Initialize empty ArrayList
+List<Integer> emptyArrayList = new ArrayList<>();
+
+// Initialize LinkedList with data
+List<Integer> linkedListWithData = new LinkedList<>(Arrays.asList(1, 2, 3, 4, 5));
+
+// Initialize empty LinkedList
+List<Integer> emptyLinkedList = new LinkedList<>();
+// Adding elements
+arrayListWithData.add(6); // [1, 2, 3, 4, 5, 6]
+arrayListWithData.add(0, 0); // [0, 1, 2, 3, 4, 5, 6]
+
+// Removing elements
+arrayListWithData.remove(Integer.valueOf(3)); // [0, 1, 2, 4, 5, 6]
+arrayListWithData.remove(0); // [1, 2, 4, 5, 6]
+
+// Accessing elements
+int firstElement = arrayListWithData.get(0); // 1
+
+// Finding elements
+int index = arrayListWithData.indexOf(4); // 2
+
+// Checking for existence
+boolean hasElement = arrayListWithData.contains(5); // true
+
+// Iterating
+for (int element : arrayListWithData) {
     System.out.println(element);
 }
-//Using a Traditional For-Loop
-for (int i = 0; i < list.size(); i++) {
-    String element = list.get(i);
-    if (element.equals("modify")) {
-        list.set(i, "modified");
-    }
-}
-//Using a ListIterator
-ListIterator<String> listIterator = list.listIterator();
-while (listIterator.hasNext()) {
-    String element = listIterator.next();
-    if (element.equals("modify")) {
-        listIterator.set("modified");
-    }
-}
-//Using the forEach()
-list.forEach(element -> System.out.println(element));
-```
-## Manipulating ArrayList, HashSet, and HashMap
 
+// Sorting
+Collections.sort(arrayListWithData); // [1, 2, 4, 5, 6]
 
-| **Operation**        | **ArrayList**                                | **HashSet**                                 | **HashMap**                                                      |
-|----------------------|----------------------------------------------|---------------------------------------------|------------------------------------------------------------------|
-| **Add**              | `list.add(element);`                         | `set.add(element);`                         | `map.put(key, value);`                                           |
-| **Remove**           | `list.remove(element);`<br>`list.remove(index);` | `set.remove(element);`                      | `map.remove(key);`                                               |
-| **Check Existence**  | `list.contains(element);`                    | `set.contains(element);`                    | `map.containsKey(key);`<br>`map.containsValue(value);`           |
-| **Get**              | `element = list.get(index);`                 | Not applicable (No index-based access)      | `value = map.get(key);`                                          |
-| **Update**           | `list.set(index, element);`                  | Replace by removing and adding if needed.   | `map.put(key, newValue);` (Updates value associated with key)    |
-| **Size**             | `int size = list.size();`                    | `int size = set.size();`                    | `int size = map.size();`                                         |
-| **Clear**            | `list.clear();`                              | `set.clear();`                              | `map.clear();`                                                   |
+// Other operations
+List<Integer> subList = arrayListWithData.subList(1, 4); // [2, 4, 5]
+List<Integer> concatenatedList = new ArrayList<>(arrayListWithData);
+concatenatedList.addAll(Arrays.asList(7, 8, 9)); // [1, 2, 4, 5, 6, 7, 8, 9]
 
-
-## Code Snippets
-
-```java
-import java.util.ArrayList;
-
-public class Main {
-    public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(10);
-        numbers.add(20);
-        numbers.add(30);
-
-        // Using a standard for-loop
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.println(numbers.get(i));
-        }
-
-        // Using an enhanced for-loop
-        for (Integer number : numbers) {
-            System.out.println(number);
-        }
-
-        // Using Java 8 Stream API
-        numbers.stream().forEach(System.out::println);
-    }
-}
 
 ```
 
-```java
-import java.util.HashSet;
-import java.util.Set;
+## Map
 
-public class Main {
-    public static void main(String[] args) {
-        // Initialize the HashSet with some values
-        HashSet<Integer> numbers = new HashSet<>();
-        //HashSet<Integer> numbers = new HashSet<>(Set.of(10, 20,));
-        numbers.add(10);
-        numbers.add(20);
-        // Loop through the HashSet
-        for (Integer number : numbers) {
-            System.out.println(number);
-        }
-    }
+Maps store keyed items and maintain the insertion order of the keys.
+
+```java
+// Initialize HashMap with data
+Map<String, Integer> hashMapWithData = new HashMap<>() {{
+    put("one", 1);
+    put("two", 2);
+    put("three", 3);
+}};
+
+// Initialize empty HashMap
+Map<String, Integer> emptyHashMap = new HashMap<>();
+
+// Initialize LinkedHashMap with data
+Map<String, Integer> linkedHashMapWithData = new LinkedHashMap<>() {{
+    put("one", 1);
+    put("two", 2);
+    put("three", 3);
+}};
+
+// Initialize empty LinkedHashMap
+Map<String, Integer> emptyLinkedHashMap = new LinkedHashMap<>();
+
+// Initialize TreeMap with data
+Map<String, Integer> treeMapWithData = new TreeMap<>() {{
+    put("one", 1);
+    put("two", 2);
+    put("three", 3);
+}};
+
+// Initialize empty TreeMap
+Map<String, Integer> emptyTreeMap = new TreeMap<>();
+
+// Adding/updating entries
+hashMapWithData.put("four", 4); // {one=1, two=2, three=3, four=4}
+
+// Removing entries
+hashMapWithData.remove("two"); // {one=1, three=3, four=4}
+
+// Accessing values by key
+int value = hashMapWithData.get("one"); // 1
+
+// Checking for existence
+boolean hasKey = hashMapWithData.containsKey("three"); // true
+boolean hasValue = hashMapWithData.containsValue(4); // true
+
+// Iterating
+for (Map.Entry<String, Integer> entry : hashMapWithData.entrySet()) {
+    System.out.println(entry.getKey() + ": " + entry.getValue());
 }
+
+// Converting to array
+String[] keysArray = hashMapWithData.keySet().toArray(new String[0]); // ["one", "three", "four"]
+Integer[] valuesArray = hashMapWithData.values().toArray(new Integer[0]); // [1, 3, 4]
+
+// Other operations
+hashMapWithData.clear(); // Map is now empty
+
 
 ```
 
+## Set
+
+Sets are collections of unique values.
+
 ```java
-import java.util.Map;
-import java.util.HashMap;
+// Initialize HashSet with data
+Set<Integer> hashSetWithData = new HashSet<>(Arrays.asList(1, 2, 3, 4, 5));
 
-public class Main {
-    public static void main(String[] args) {
-        // Creating and initializing a HashMap
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "one");
-        map.put(2, "two");
-        map.put(3, "three");
+// Initialize empty HashSet
+Set<Integer> emptyHashSet = new HashSet<>();
 
-        // Looping over entry set
-        for (Map.Entry<Integer, String> entry : map.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-        }
+// Initialize LinkedHashSet with data
+Set<Integer> linkedHashSetWithData = new LinkedHashSet<>(Arrays.asList(1, 2, 3, 4, 5));
 
-        // Looping over key set
-        for (Integer key : map.keySet()) {
-        System.out.println("Key: " + key + ", Value: " + map.get(key));
+// Initialize empty LinkedHashSet
+Set<Integer> emptyLinkedHashSet = new LinkedHashSet<>();
 
-        // Looping over value set
-        for (Integer key : map.keySet()) {
-        System.out.println("Key: " + key + ", Value: " + map.get(key));
+// Initialize TreeSet with data
+Set<Integer> treeSetWithData = new TreeSet<>(Arrays.asList(1, 2, 3, 4, 5));
+
+// Initialize empty TreeSet
+Set<Integer> emptyTreeSet = new TreeSet<>();
+
+// Adding elements
+hashSetWithData.add(6); // [1, 2, 3, 4, 5, 6]
+
+// Removing elements
+hashSetWithData.remove(3); // [1, 2, 4, 5, 6]
+
+// Checking for existence
+boolean hasElement = hashSetWithData.contains(4); // true
+
+// Iterating
+for (int element : hashSetWithData) {
+    System.out.println(element);
 }
-        // Using forEach (Java 8+)
-        map.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value));
-    }
-}
+
+// Converting to array
+Integer[] arrayFromSet = hashSetWithData.toArray(new Integer[0]); // [1, 2, 4, 5, 6]
+
+// Converting to List
+List<Integer> listFromSet = new ArrayList<>(hashSetWithData); // [1, 2, 4, 5, 6]
+
+// Other operations
+hashSetWithData.clear(); // Set is now empty
+```
+
+## Collections Hierarchy
+
+```plaintext
+java.util
+├── Collection (Interface)
+│   ├── List (Interface)
+│   │   ├── AbstractList (Abstract Class)
+│   │   │   ├── ArrayList
+│   │   │   ├── AbstractSequentialList (Abstract Class)
+│   │   │   │   └── LinkedList
+│   │   ├── Vector
+│   │   │   └── Stack
+│   │   └── CopyOnWriteArrayList
+│   ├── Set (Interface)
+│   │   ├── AbstractSet (Abstract Class)
+│   │   │   ├── HashSet
+│   │   │   ├── LinkedHashSet
+│   │   │   └── EnumSet
+│   │   ├── SortedSet (Interface)
+│   │   │   └── NavigableSet (Interface)
+│   │   │       └── TreeSet
+│   │   └── CopyOnWriteArraySet
+│   └── Queue (Interface)
+│       ├── Deque (Interface)
+│       │   ├── ArrayDeque
+│       │   └── LinkedList
+│       ├── AbstractQueue (Abstract Class)
+│       │   └── PriorityQueue
+│       └── BlockingQueue (Interface)
+│           ├── ArrayBlockingQueue
+│           ├── LinkedBlockingQueue
+│           ├── PriorityBlockingQueue
+│           ├── DelayQueue
+│           ├── SynchronousQueue
+│           └── LinkedTransferQueue
+└── Map (Interface)
+    ├── AbstractMap (Abstract Class)
+    │   ├── HashMap
+    │   │   └── LinkedHashMap
+    │   ├── TreeMap
+    │   ├── WeakHashMap
+    │   ├── IdentityHashMap
+    │   └── EnumMap
+    ├── SortedMap (Interface)
+    │   └── NavigableMap (Interface)
+    │       └── TreeMap
+    ├── ConcurrentMap (Interface)
+    │   └── ConcurrentHashMap
+    └── Properties
 
 ```

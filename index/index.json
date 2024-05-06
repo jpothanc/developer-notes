@@ -70,7 +70,7 @@
       {
         "name": "collections",
         "description": "collections and usage",
-        "link": "default.md"
+        "link": "java/collections.md"
       },
       {
         "name": "rxjava",
@@ -97,7 +97,7 @@
       {
         "name": "collections",
         "description": "collections and usage",
-        "link": "default.md"
+        "link": ".net/collections.md"
       },
       {
         "name": "async-programming",
