@@ -41,7 +41,7 @@
       {
         "name": "design patterns",
         "bgColor": "#5D4037",
-        "link": "blank.md"
+        "link": "design patterns/overview.md"
       },
       {
         "name": "azure",
