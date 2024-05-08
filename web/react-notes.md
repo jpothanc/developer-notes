@@ -10,7 +10,7 @@ Vite is a fast build tool that provides a great developer experience for modern 
 
 Make sure you have Node.js installed.
 
-```
+```text
 C:\Users\kalje>node -v
 v18.15.0
 ```
@@ -43,7 +43,7 @@ C:\Users\kalje>npm create vite@latest
 
 To implement routing in a React application, you can use the react-router-dom.
 
-```
+```text
 npm install react-router-dom
 ```
 
@@ -83,7 +83,7 @@ export default App;
 
 Handling 404 Pages
 
-```
+```text
 <Route path="*" element={<NotFound />} />
 ```
 
@@ -102,7 +102,7 @@ const StudentRegistration = () => {
   const [studentState, setstudentState] = useState<student>({
     firstName: "",
     lastName: "",
-    age: false,
+    age: 0,
   });
 
   function handleFormChange (source: string, value: string) {
