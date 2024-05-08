@@ -69,6 +69,11 @@
         "name": "react-hooks",
         "description": "useState, useEffect, useMemo....",
         "link": "web/react-hooks.md"
+      },
+      {
+        "name": "react-notes",
+        "description": "react concepts to remember",
+        "link": "web/react-notes.md"
       }
     ],
     "java": [
