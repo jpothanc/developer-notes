@@ -89,26 +89,39 @@ Handling 404 Pages
 
 # Handling Object State for Complex Types
 
-Don't create multiple states.
+Don't create multiple states. See the handle change function.
 
 ```typescript
 type student = {
   firstName: string;
   lastName: string;
-  age: number;
+  age: string;
 };
 
 const StudentRegistration = () => {
   const [studentState, setstudentState] = useState<student>({
     firstName: "",
     lastName: "",
-    age: 0,
+    email: "",
   });
 
-  function handleFormChange (source: string, value: string) {
-    setFormState({
-      ...formState,
-      [source]:value
+  const handleChange = (e) =>{
+    setstudentState({
+      ...studentState,
+      [e.target.name]:e.target.value,
     });
-  };
+  }
+
+return (
+    <form>
+    <input type="text" onChange={handleChange}
+    name="firstName" placeholder="first name" />
+    <input type="text" onChange={handleChange}
+    name="lastName" placeholder="last name" />
+     <input type="text" onChange={handleChange}
+    name="email" placeholder="email" />
+    </form>
+
+
+  );
 ```
