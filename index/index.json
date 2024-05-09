@@ -72,7 +72,7 @@
       },
       {
         "name": "react-fetch",
-        "description": "react fetch api usage",
+        "description": "fetch api usage in react",
         "link": "web/react-fetch.md"
       },
       {
