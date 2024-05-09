@@ -45,6 +45,27 @@ function simpleFetchGet(url: string, signal?: AbortSignal): Promise<any> {
 ```
 
 ```javascript
+// using fluent syntax in react components directly
+const [users, setUsers] = useState<User[]>([]);
+
+useEffect(() => {
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then((users) => setUsers(users))
+    .catch((error) => {
+      // Handle any errors here
+      console.error('Error fetching data:', error);
+    });
+}, []);
+
+```
+
+```javascript
 //using in react
 
 //given the user type
