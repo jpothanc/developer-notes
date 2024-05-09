@@ -1,35 +1,9 @@
-```python
-from ftplib import FTP_TLS
+I am excited to sponsor Jessish for promotion to Executive Director. Over the past 18+ years, Jessish has been a driving force behind the success of our equities trading operations as the Front Office Application Lead. His leadership, innovative mindset, and deep understanding of trading systems have transformed our order entry processes, resulting in remarkable improvements in efficiency and client satisfaction.
 
-def send_file_to_ftps(host, port, username, password, file_path, destination_path):
-    try:
-        # Connect to the FTPS server
-        ftps = FTP_TLS()
-        ftps.connect(host, port)
-        ftps.login(username, password)
+A standout achievement was the successful rollout of GOMAN, the next-generation Global Order Entry platform, across APAC under his leadership.
 
-        # Use secure data connection
-        ftps.prot_p()
+For the AES desk, Jessish was instrumental in integrating Bloomberg Connect with the Order Entry application, streamlining workflows and improving efficiency. He played a pivotal role in implementing Global AES dialogs in the region, which offered dynamic addition of new algo parameters. This significantly reduced time to market and enhanced client satisfaction. Another vital addition building the FX trading functionality, which eliminated multiple manual steps and costly errors, saving the bank significant money.
 
-        # Transfer the file
-        with open(file_path, 'rb') as file:
-            ftps.storbinary(f'STOR {destination_path}', file)
+Above all, he initiated a monthly Tips newsletter that provided insights into lesser-known features of applications, helping the desk trade more effectively.
 
-        print(f"File '{file_path}' uploaded successfully to '{destination_path}' on FTPS server.")
-
-        # Quit
-        ftps.quit()
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-# Example usage:
-host = 'ftp.example.com'
-port = 21  # Default FTPS port
-username = 'your_username'
-password = 'your_password'
-file_path = 'local_file.txt'
-destination_path = '/remote_directory/remote_file.txt'
-
-send_file_to_ftps(host, port, username, password, file_path, destination_path)
-
-```
+Jessish consistently demonstrates strategic vision and technical expertise, fostering a culture of collaboration and excellence within the team. I have no doubt that Jessish will continue to excel in the role of Executive Director and positively impact the organization.
