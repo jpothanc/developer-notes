@@ -2,6 +2,8 @@
 
 The Fetch API simplifies HTTP requests in JavaScript, but lacks built-in support for cancelling requests. Utilizing the AbortController interface addresses this limitation, allowing for the cancellation of fetch requests, enhancing resource management and user experience.
 
+### Simple Fetch
+
 ```javascript
 async function simpleFetchGet(url: string, signal?: AbortSignal): Promise<any> {
   const response = await fetch(url, { signal });
@@ -15,8 +17,9 @@ async function simpleFetchGet(url: string, signal?: AbortSignal): Promise<any> {
 }
 ```
 
+### Using Generics
+
 ```javascript
-//using generics
 async function simpleFetchGet<T>(
   url: string,
   signal?: AbortSignal
@@ -32,8 +35,9 @@ async function simpleFetchGet<T>(
 }
 ```
 
+### Using Fluent Syntax
+
 ```javascript
-// using fluent syntax
 function simpleFetchGet(url: string, signal?: AbortSignal): Promise<any> {
   return fetch(url, { signal }).then((response) => {
     if (!response.ok) {
@@ -44,12 +48,17 @@ function simpleFetchGet(url: string, signal?: AbortSignal): Promise<any> {
 }
 ```
 
+### Using Fluent Syntax in React Components Directly
+
 ```javascript
-// using fluent syntax in react components directly
+
 const [users, setUsers] = useState<User[]>([]);
 
 useEffect(() => {
-  fetch(url)
+  const controller = new AbortController();
+  const signal = controller.signal;
+
+  fetch(url, { signal })
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -61,13 +70,18 @@ useEffect(() => {
       // Handle any errors here
       console.error('Error fetching data:', error);
     });
+
+  return () => {
+    controller.abort();
+  };
 }, []);
+
 
 ```
 
-```javascript
-//using in react
+### Using simpleFetchGet in React
 
+```javascript
 //given the user type
 interface User {
   id: number;
