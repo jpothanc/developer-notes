@@ -159,9 +159,9 @@
         "link": "javascript/collections.md"
       },
       {
-        "name": "fetch api",
-        "description": "how to use fetch api",
-        "link": "default.md"
+        "name": "function declarations",
+        "description": "function declarations in ts",
+        "link": "javascript/function-declarations.md"
       }
     ],
     "testing": [
