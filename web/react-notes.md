@@ -23,20 +23,7 @@ C:\Users\kalje>npm create vite@latest
 >   Vanilla
     Vue
     React
-    Preact
-    Lit
-    Svelte
-    Solid
-    Qwik
-    Others
-
- Select a framework: » React
-? Select a variant: » - Use arrow-keys. Return to submit.
->   TypeScript
-    TypeScript + SWC
-    JavaScript
-    JavaScript + SWC
-    Remix ↗
+    ....
 ```
 
 # Routing
