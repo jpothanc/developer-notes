@@ -65,7 +65,7 @@ class Program
         dataEnrichmentFilter.SetNext(dataValidateFilter);
         
         DataMsg msg = null;
-        dbQueryFilter.HandleMsg(msg);l
+        dbQueryFilter.HandleMsg(msg);
        
     }
 }
