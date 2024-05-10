@@ -207,7 +207,7 @@
       {
         "name": "chain of responsibility",
         "description": "behavioral",
-        "link": "default.md"
+        "link": "design patterns/chain-of-responsiblity.md"
       },
       {
         "name": "facade",

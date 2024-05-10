@@ -1,61 +1,53 @@
 # Chain of Responsibility
 
 ## Overview
-he Chain of Responsibility pattern allows a request to be processed by multiple handlers, one after another. Each handler decides whether to process the request or pass it to the next handler in the chain.
+The Chain of Responsibility pattern allows a request to be processed by multiple handlers, one after another. Each handler decides whether to process the request or pass it to the next handler in the chain.
 
-A example of the Chain of Responsibility pattern can be seen in handling different number formats. For instance, consider the requirement to format a number based on different conditions like percentages, currency, or plain numeric format.
+ A Chain of Responsibility can be used to route and process messages through different nodes or components in the system. Each component in the chain can perform specific tasks like validation, transformation, enrichment, etc., before passing the message to the next component.
 
-### Key Points
-- **Multiple Formatters** handle the number based on their specific format type.
-- **Sequential Handling** allows each formatter to pass unhandled requests to the next formatter.
 
 ## Example in C#
 
 ```csharp
 // Abstract Handler
-abstract class NumberFormatter
+abstract class FilterBase
 {
-    protected NumberFormatter _nextFormatter;
+    protected FilterBase _nextFilter;
 
-    public void SetNext(NumberFormatter nextFormatter)
+    public void SetNext(FilterBase nextFilter)
     {
-        _nextFormatter = nextFormatter;
+        _nextFilter = nextFilter;
     }
 
-    public abstract void FormatNumber(double number, string formatType);
+    public abstract void HandleMsg(DataMsg msg);
 }
 
 // Concrete Handlers
-class PercentageFormatter : NumberFormatter
+class DatabaseQueryFilter : FilterBase
 {
-    public override void FormatNumber(double number, string formatType)
+    public override void HandleMsg(DataMsg msg)
     {
-        if (formatType == "Percentage")
-            Console.WriteLine($"{number:P}");
-        else
-            _nextFormatter?.FormatNumber(number, formatType);
+        //Query database and assign the results to msg
+        msg.data = dbresults;
+        _nextFilter?.HandleMsg(msg);
     }
 }
 
-class CurrencyFormatter : NumberFormatter
+class DataEnrichmentFilter : FilterBase
 {
-    public override void FormatNumber(double number, string formatType)
+    public override void HandleMsg(DataMsg msg)
     {
-        if (formatType == "Currency")
-            Console.WriteLine($"{number:C}");
-        else
-            _nextFormatter?.FormatNumber(number, formatType);
+         //Enrich the data received from database.
+        _nextFilter?.HandleMsg(msg);
     }
 }
 
-class PlainNumberFormatter : NumberFormatter
+class DataValidateFilter : FilterBase
 {
-    public override void FormatNumber(double number, string formatType)
+    public override void HandleMsg(DataMsg msg)
     {
-        if (formatType == "Plain")
-            Console.WriteLine($"{number:F}");
-        else
-            _nextFormatter?.FormatNumber(number, formatType);
+         //Validate the enriched data
+        _nextFilter?.HandleMsg(msg);
     }
 }
 
@@ -65,18 +57,16 @@ class Program
     static void Main()
     {
         // Set up the chain of handlers
-        var percentageFormatter = new PercentageFormatter();
-        var currencyFormatter = new CurrencyFormatter();
-        var plainNumberFormatter = new PlainNumberFormatter();
-
-        percentageFormatter.SetNext(currencyFormatter);
-        currencyFormatter.SetNext(plainNumberFormatter);
-
-        // Use the chain to format numbers
-        double value = 12345.6789;
-        percentageFormatter.FormatNumber(value, "Currency");  // Output: $12,345.68
-        percentageFormatter.FormatNumber(value, "Percentage"); // Output: 1,234,567.89%
-        percentageFormatter.FormatNumber(value, "Plain");      // Output: 12345.68
-        percentageFormatter.FormatNumber(value, "Unknown");    // No output, as no handler could process the request
+        var dbQueryFilter = new DatabaseQueryFilter();
+        var dataEnrichmentFilter = new DataEnrichmentFilter();
+        var dataValidateFilter = new DataValidateFilter();
+        
+        dbQueryFilter.SetNext(dataEnrichmentFilter)
+        dataEnrichmentFilter.SetNext(dataValidateFilter);
+        
+        DataMsg msg = null;
+        dbQueryFilter.HandleMsg(msg);l
+       
     }
 }
+```
