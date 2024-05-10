@@ -1,6 +1,5 @@
 # Chain of Responsibility
 
-## Overview
 The Chain of Responsibility pattern allows a request to be processed by multiple handlers, one after another. Each handler decides whether to process the request or pass it to the next handler in the chain.
 
  A Chain of Responsibility can be used to route and process messages through different nodes or components in the system. Each component in the chain can perform specific tasks like validation, transformation, enrichment, etc., before passing the message to the next component.
