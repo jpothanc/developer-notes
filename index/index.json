@@ -210,6 +210,21 @@
         "link": "design patterns/behavioural/chain-of-responsiblity.md"
       },
       {
+        "name": "command",
+        "description": "behavioral",
+        "link": "design patterns/behavioural/command.md"
+      },
+      {
+        "name": "stratergy",
+        "description": "behavioral",
+        "link": "design patterns/behavioural/stratergy.md"
+      },
+      {
+        "name": "visitor",
+        "description": "behavioral",
+        "link": "design patterns/behavioural/visitor.md"
+      },
+      {
         "name": "facade",
         "description": "structural",
         "link": "default.md"
