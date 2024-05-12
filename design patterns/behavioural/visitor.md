@@ -78,10 +78,6 @@ public class LogVisitor implements Visitor {
 
 }
 ```cshharp
-// Main class
-public class Main {
-
-  public static void main(String[] args) {
 
     // Create element objects
     Book book = new Book("The Lord of the Rings");
@@ -96,9 +92,6 @@ public class Main {
     book.accept(logVisitor);
     movie.accept(serializeVisitor);
     movie.accept(logVisitor);
-
-  }
-}
 
 ```csharp
 ````
