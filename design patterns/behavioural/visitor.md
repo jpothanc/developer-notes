@@ -47,8 +47,8 @@ public interface Visitor {
 }
 ```
 
-````csharp
-// Visitor interface
+```csharp
+
 // Concrete visitor classes
 public class SerializeVisitor implements Visitor {
 
@@ -77,7 +77,8 @@ public class LogVisitor implements Visitor {
   }
 
 }
-```cshharp
+```
+```csharp
 
     // Create element objects
     Book book = new Book("The Lord of the Rings");
@@ -93,5 +94,4 @@ public class LogVisitor implements Visitor {
     movie.accept(serializeVisitor);
     movie.accept(logVisitor);
 
-```csharp
 ````
