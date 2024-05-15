@@ -205,6 +205,16 @@
         "link": "default.md"
       },
       {
+        "name": "decorator",
+        "description": "structural",
+        "link": "design patterns/structural/decorator.md"
+      },
+      {
+        "name": "facade",
+        "description": "structural",
+        "link": "design patterns/structural/facade.md"
+      },
+      {
         "name": "chain of responsibility",
         "description": "behavioral",
         "link": "design patterns/behavioural/chain-of-responsiblity.md"
@@ -223,16 +233,6 @@
         "name": "visitor",
         "description": "behavioral",
         "link": "design patterns/behavioural/visitor.md"
-      },
-      {
-        "name": "decorator",
-        "description": "structural",
-        "link": "design patterns/structural/decorator.md"
-      },
-      {
-        "name": "facade",
-        "description": "structural",
-        "link": "design patterns/structural/facade.md"
       }
     ],
     "azure": [
