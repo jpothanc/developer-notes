@@ -4,12 +4,16 @@ The Decorator Pattern is a structural design pattern that allows behavior to be 
 
 Following example shows, how we can use this pattern to extend the HttpRequest to be cached on a disk or redis.
 
+Component Interface
+
 ```csharp
 public interface IHttpRequest
 {
     Response Request(Request request);
 }
 ```
+
+Concrete Component
 
 ```csharp
 public class HttpRequest : IHttpRequest
@@ -20,6 +24,8 @@ public class HttpRequest : IHttpRequest
     }
 }
 ```
+
+Decorator Base Class
 
 ```csharp
 public class HttpRequestDecorator : HttpRequest
@@ -36,6 +42,8 @@ public class HttpRequestDecorator : HttpRequest
     }
 }
 ```
+
+Concrete Decorators
 
 ```csharp
 public class HttpRequestDiskCache : HttpRequestDecorator
