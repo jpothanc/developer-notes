@@ -227,7 +227,7 @@
       {
         "name": "decorator",
         "description": "structural",
-        "link": "patterns/structural/decorator.md"
+        "link": "design patterns/structural/decorator.md"
       },
       {
         "name": "facade",
