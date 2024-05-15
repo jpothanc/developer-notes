@@ -232,7 +232,7 @@
       {
         "name": "facade",
         "description": "structural",
-        "link": "default.md"
+        "link": "design patterns/structural/facade.md"
       }
     ],
     "azure": [
