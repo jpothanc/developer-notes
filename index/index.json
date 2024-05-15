@@ -225,6 +225,11 @@
         "link": "design patterns/behavioural/visitor.md"
       },
       {
+        "name": "decorator",
+        "description": "structural",
+        "link": "patterns/structural/decorator.md"
+      },
+      {
         "name": "facade",
         "description": "structural",
         "link": "default.md"
@@ -302,6 +307,11 @@
         "name": "loops",
         "description": "looping in different languages",
         "link": "others/mixloops.md"
+      },
+      {
+        "name": "markdown",
+        "description": "markdown syntax",
+        "link": "others/markdown.md"
       }
     ]
   }
