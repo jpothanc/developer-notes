@@ -4,11 +4,19 @@
 
 - [Headings](#headings)
 - [Emphasis](#emphasis)
+- [UnOrdered Lists](#unordered-lists)
 - [Ordered Lists](#ordered-lists)
 - [Links](#links)
 - [Images](#images)
 - [Code Blocks](#code-blocks)
+- [Inline HTML](#inline-html)
 - [Tables](#tables)
+- [Footnotes](#footnotes)
+- [Definition Lists](#definition-lists)
+- [Task Lists](#task-lists)
+- [Emoji](#emoji)
+- [HTML Blocks](#html-blocks)
+- [Math and LaTeX](#math-and-latex)
 
 ### Headings
 
@@ -40,9 +48,8 @@ _Italic Text_
 ~~Strikethrough Text~~
 ```
 
-### Lists
+### Unordered Lists
 
-Unordered Lists
 Use -, \*, or + for unordered lists.
 
 ```markdown
@@ -94,4 +101,55 @@ Use triple backticks ``` for code blocks.
 ```python
 def hello_world():
     print("Hello, World!")
+```
+
+### Inline HTML
+
+You can also use inline HTML for more advanced formatting.
+
+```markdown
+<p>This is a paragraph in HTML.</p>
+```
+
+## Footnotes
+
+Here is a footnote reference[^1].
+
+```markdown
+[^1]: This is the footnote.
+```
+
+## Definition Lists
+
+```markdown
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2
+```
+
+## Task Lists
+
+```markdown
+- [x] Completed task
+- [ ] Incomplete task
+```
+
+## Emoji
+
+```markdown
+:smile: :heart: :+1:
+```
+
+## Math and LaTeX
+
+```markdown
+Inline math: $E = mc^2$
+
+Block math:
+
+$$
+E = mc^2
+$$
 ```
