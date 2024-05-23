@@ -92,9 +92,9 @@ Azure Conditional Access is a tool within Microsoft Entra ID that enables organi
 
 ## How It Works
 
-1. **Signal Collection**: During the login attempt, Conditional Access collects signals like location, device compliance, and application being accessed.
-2. **Decision Making**: Based on the gathered signals and predefined policies, the system decides whether to allow access, deny access, or require additional verification.
-3. **Enforcement**: The decision is enforced by either granting access, blocking access, or challenging the user for additional credentials (e.g., MFA).
+- **Signal Collection**: During the login attempt, Conditional Access collects signals like location, device compliance, and application being accessed.
+- **Decision Making**: Based on the gathered signals and predefined policies, the system decides whether to allow access, deny access, or require additional verification.
+- **Enforcement**: The decision is enforced by either granting access, blocking access, or challenging the user for additional credentials (e.g., MFA).
 
 ## Use Cases
 
@@ -116,9 +116,9 @@ Azure Role-Based Access Control (RBAC) is a system that allows organizations to 
 
 ## How It Works
 
-1. **Role Assignments**: Users or groups are assigned roles that define their permissions.
-2. **Scope**: Defines where permissions are applied. Can be a resource, resource group, subscription, or management group.
-3. **Inheritance**: Permissions granted at a higher scope automatically apply to lower levels within that scope.
+- **Role Assignments**: Users or groups are assigned roles that define their permissions.
+- **Scope**: Defines where permissions are applied. Can be a resource, resource group, subscription, or management group.
+- **Inheritance**: Permissions granted at a higher scope automatically apply to lower levels within that scope.
 
 ## Use Cases
 
@@ -150,9 +150,9 @@ Zero Trust is a security model that assumes the worst-case scenario and protects
 
 ## Guiding Principles
 
-1. **Verify Explicitly**: Always authenticate and authorize based on all available data points.
-2. **Use Least Privilege Access**: Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
-3. **Assume Breach**: Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
+- **Verify Explicitly**: Always authenticate and authorize based on all available data points.
+- **Use Least Privilege Access**: Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
+- **Assume Breach**: Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
 
 ## Adapting to Zero Trust
 
@@ -170,13 +170,13 @@ Defense-in-depth is a security strategy aimed at protecting information and prev
 
 Defense-in-depth can be visualized as a set of layers, with the central data to be secured surrounded by protective layers:
 
-1. **Physical Security**: Protects computing hardware in the datacenter, ensuring physical safeguards against access to assets.
-2. **Identity and Access**: Controls access to infrastructure, ensures secure identities, grants access only as needed, and logs sign-in events and changes.
-3. **Perimeter**: Uses DDoS protection and perimeter firewalls to filter and identify network-based attacks against resources.
-4. **Network**: Limits communication between resources, restricts inbound internet access, and implements secure connectivity to on-premises networks.
-5. **Compute**: Secures access to virtual machines, implements endpoint protection, and ensures systems are patched and current.
-6. **Application**: Integrates security into the application development lifecycle, ensures applications are secure and free of vulnerabilities, and stores sensitive application secrets securely.
-7. **Data**: Controls access to business and customer data, ensures confidentiality, integrity, and availability, and protects data stored in databases, virtual machines, SaaS applications, and cloud storage.
+- **Physical Security**: Protects computing hardware in the datacenter, ensuring physical safeguards against access to assets.
+- **Identity and Access**: Controls access to infrastructure, ensures secure identities, grants access only as needed, and logs sign-in events and changes.
+- **Perimeter**: Uses DDoS protection and perimeter firewalls to filter and identify network-based attacks against resources.
+- **Network**: Limits communication between resources, restricts inbound internet access, and implements secure connectivity to on-premises networks.
+- **Compute**: Secures access to virtual machines, implements endpoint protection, and ensures systems are patched and current.
+- **Application**: Integrates security into the application development lifecycle, ensures applications are secure and free of vulnerabilities, and stores sensitive application secrets securely.
+- **Data**: Controls access to business and customer data, ensures confidentiality, integrity, and availability, and protects data stored in databases, virtual machines, SaaS applications, and cloud storage.
 
 ## Azure's Approach to Defense-in-Depth
 

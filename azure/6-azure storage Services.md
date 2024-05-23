@@ -4,28 +4,29 @@
 
 ### Locally Redundant Storage (LRS)
 
-- Explanation: Stores data within a single physical location in the data center to protect against hardware failures.
+- Explanation: Stores data within a single physical location in the data center to protect against hardware failures.It replicates your data three times within a single data center in the primary region
 - Durability in Nines: 11 nines (suitable for non-critical data)
 
 ### Zone-Redundant Storage (ZRS)
 
-- Explanation: Spreads data across multiple storage units in one or more data centers within a region.
+- Explanation:Zone-redundant storage (ZRS) replicates your Azure Storage data synchronously across three Azure availability zones in the primary region.
 - Durability in Nines: 12 nines (good for critical regional data)
 
 ### Geo-Redundant Storage (GRS)
 
-- Explanation: Replicates data to a secondary region that is hundreds of miles away from the primary region.
+- Explanation: Replicates data to a secondary region that is hundreds of miles away from the primary region.GRS is similar to running LRS in two regions.
 - Durability in Nines: 16 nines (recommended for essential data needing geographic redundancy)
+
+### Geo-Zone-Redundant Storage (GZRS)
+
+- Explanation: Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region.
+  ZRS is similar to running ZRS in the primary region and LRS in the secondary region.
+- Durability in Nines: 16 nines (enhanced durability across zones and regions)
 
 ### Read-Access Geo-Redundant Storage (RA-GRS)
 
 - Explanation: Same as GRS, but provides read-only access to the data in the secondary location.
 - Durability in Nines: 16 nines (plus read access from secondary, ideal for applications needing fast read access during regional outages)
-
-### Geo-Zone-Redundant Storage (GZRS)
-
-- Explanation: Combines the features of GRS and ZRS, replicating data across zones in the primary region and to a secondary region.
-- Durability in Nines: 16 nines (enhanced durability across zones and regions)
 
 ### Read-Access Geo-Zone-Redundant Storage (RA-GZRS)
 
@@ -75,6 +76,19 @@
 
 - NoSQL datastore for storing large amounts of structured, non-relational data.
 - Ideal for applications requiring a hybrid or multi-cloud setup.
+
+### Blob storage tiers
+
+- **Hot access tier**: Optimized for storing data that is accessed frequently (for example, images for your website).
+- **Cool access tier**: Optimized for data that is infrequently accessed and stored for at least 30 days (for example, invoices for your customers).
+- **Cold access tier**: Optimized for storing data that is infrequently accessed and stored for at least 90 days.
+- **Archive access tier**: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible latency requirements (for example, long-term backups).
+
+The following considerations apply to the different access tiers:
+Hot and cool access tiers can be set at the account level. The cold and archive access tiers aren't available at the account level.
+Hot, cool, cold, and archive tiers can be set at the blob level, during or after upload.
+Data in the cool and cold access tiers can tolerate slightly lower availability, but still requires high durability, retrieval latency, and throughput characteristics similar to hot data. For cool and cold data, a lower availability service-level agreement (SLA) and higher access costs compared to hot data are acceptable trade-offs for lower storage costs.
+Archive storage stores data offline and offers the lowest storage costs, but also the highest costs to rehydrate and access data.
 
 ### Accessing Storage
 

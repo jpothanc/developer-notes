@@ -32,9 +32,9 @@ Microsoft Purview consists of two main solution areas:
 
 ## Get Started with Microsoft Purview:
 
-1. **Automated Discovery**: Allow Purview to automatically discover your data across various environments.
-2. **Data Classification**: Utilize Purview's classification tools to identify and label sensitive data.
-3. **End-to-End Lineage**: Track the lineage of your data to understand its journey and ensure compliance.
+- **Automated Discovery**: Allow Purview to automatically discover your data across various environments.
+- **Data Classification**: Utilize Purview's classification tools to identify and label sensitive data.
+- **End-to-End Lineage**: Track the lineage of your data to understand its journey and ensure compliance.
 
 ## Key Benefits:
 
@@ -61,10 +61,10 @@ Azure Policy is a service in Azure that enables you to create, assign, and manag
 
 ## How Azure Policy Works:
 
-1. **Definition**: Define policies to specify rules for resource configurations.
-2. **Evaluation**: Azure Policy evaluates resources against defined policies and highlights noncompliant resources.
-3. **Enforcement**: Prevent noncompliant resources from being created or automatically remediate noncompliant configurations.
-4. **Integration**: Integrates with Azure DevOps for continuous integration and delivery pipeline policies.
+- **Definition**: Define policies to specify rules for resource configurations.
+- **Evaluation**: Azure Policy evaluates resources against defined policies and highlights noncompliant resources.
+- **Enforcement**: Prevent noncompliant resources from being created or automatically remediate noncompliant configurations.
+- **Integration**: Integrates with Azure DevOps for continuous integration and delivery pipeline policies.
 
 ## Azure Policy Initiatives:
 
@@ -92,8 +92,8 @@ Resource locks in Azure prevent accidental deletion or modification of critical 
 
 ## Types of Resource Locks:
 
-1. **Delete Lock**: Prevents users from deleting a resource, but allows them to read and modify it.
-2. **ReadOnly Lock**: Prevents users from deleting or updating a resource, restricting them to read-only access.
+- **Delete Lock**: Prevents users from deleting a resource, but allows them to read and modify it.
+- **ReadOnly Lock**: Prevents users from deleting or updating a resource, restricting them to read-only access.
 
 ### Managing Resource Locks:
 
@@ -125,6 +125,6 @@ The Microsoft Service Trust Portal is a comprehensive platform that offers acces
 
 ### Main Menu Categories:
 
-1. **Service Trust Portal**: Quick access link to the portal's home page.
-2. **My Library**: Save documents for quick access and set up notifications for updates.
-3. **All Documents**: Single landing place for all documents available on the Service Trust Portal. Documents can be pinned for quick access from My Library.
+- **Service Trust Portal**: Quick access link to the portal's home page.
+- **My Library**: Save documents for quick access and set up notifications for updates.
+- **All Documents**: Single landing place for all documents available on the Service Trust Portal. Documents can be pinned for quick access from My Library.
