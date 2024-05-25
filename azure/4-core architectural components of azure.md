@@ -76,3 +76,24 @@ This diagram represents how various components within # Azure Hierarchical Struc
       - **Resource Group VI**
         - Resource 11
         - Resource 12
+
+## Azure Support Plans
+| Support Plan        | Cost               | Scope of Support                                          | Available Services                                     |
+|---------------------|--------------------|-----------------------------------------------------------|--------------------------------------------------------|
+| **Basic**           | Free               | Billing support and subscription management only.         | Self-help resources and community support.             |
+| **Developer**       | Approximately $29/month | Best for trial and non-production environments.         | Unlimited 24/7 access to technical support via email for non-critical issues, access to full set of Azure Advisor recommendations. |
+| **Standard**        | Starting at $100/month | Recommended for production workloads.                   | Everything in Developer, plus 24/7 access to technical support with faster response times for critical issues, and proactive guidance from Azure Advisor. |
+| **Professional Direct** | Starting at $1000/month | Ideal for business-critical dependence on Azure.       | Everything in Standard, plus faster response times, access to Azure Rapid Response, Azure Event Management, and ProDirect Delivery Manager. |
+| **Premier**         | Custom pricing     | Enterprises that require a higher level of partnership.  | All previous benefits plus a designated Technical Account Manager, Azure Solutions best practices, personalized proactive support, and more. |
+
+### Key Features:
+- **Response Times:** Varies by plan, with the fastest responses available under the Premier plan.
+- **Technical Support:** Ranges from email support for non-critical issues (Developer) to 24/7 phone support for all issues including critical (Premier).
+- **Proactive Support:** Available from the Standard plan upwards, including full Azure Advisor recommendations.
+- **Direct Contact:** Available in the Professional Direct and Premier plans, offering direct access to Azure experts.
+
+### Additional Notes:
+- Pricing can vary based on region and specific needs.
+- More comprehensive services like a designated Technical Account Manager and on-demand engineers are provided in the higher-tier plans to ensure enterprise-grade support.
+
+This table offers a structured comparison to help organizations choose the appropriate Azure support plan based on their operational needs and criticality of their Azure deployments.

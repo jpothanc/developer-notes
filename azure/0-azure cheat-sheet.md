@@ -321,3 +321,19 @@ This table provides a concise and comparative view of the three main cloud servi
 | **Azure Advisor**        | Optimizes Azure resources for reliability, security, performance, operational excellence, and cost. | Provides actionable recommendations, available via Azure portal and API.                                |
 | **Azure Service Health** | Tracks the health and status of Azure services and resources.                                       | Includes Azure Status, Service Health, and Resource Health for comprehensive monitoring.                |
 | **Azure Monitor**        | Collects, analyzes, and acts on telemetry data from Azure and other environments.                   | Features Azure Log Analytics, Alerts, and Application Insights for detailed monitoring and diagnostics. |
+
+## 11-Availablity
+
+| Availability (Nines) | Minimum VMs Required | Availability Zones Required | Downtime per Year | Description                                                         |
+|----------------------|----------------------|-----------------------------|-------------------|---------------------------------------------------------------------|
+| 99% (Two Nines)      | 2                    | 1                           | 3.65 days         | VMs can be in the same Zone; less focus on high availability.       |
+| 99.9% (Three Nines)  | 2                    | 1+                          | 8.76 hours        | VMs should ideally be in separate Fault Domains within a Zone.      |
+| 99.99% (Four Nines)  | 2+                   | 2+                          | 52.56 minutes     | VMs must be across multiple Availability Zones to ensure high availability and fault tolerance. |
+| 99.999% (Five Nines) | 3+                   | 3+                          | 5.26 minutes      | Multiple VMs across all available Availability Zones in a region are recommended for maximum resilience. |
+
+### Key Considerations:
+- **VMs Count:** Increasing the number of VMs can enhance fault tolerance and load distribution, which is crucial for maintaining high availability.
+- **Availability Zones:** Distributing VMs across multiple Availability Zones protects against zone-level failures. Each zone contains one or more data centers equipped with independent power, cooling, and networking.
+- **SLA Calculation:** Azure provides an SLA for Virtual Machines that have two or more instances deployed in the same Availability Set or Virtual Machine Scale Set in at least two Availability Zones. The SLA for a single instance VM with premium storage is lower but can be enhanced with additional instances and proper configuration.
+- **Additional Resources:** Utilizing Azure services like Azure Site Recovery and Azure Backup, along with strategic placement of VMs, helps in achieving higher SLAs.
+
