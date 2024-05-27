@@ -324,16 +324,129 @@ This table provides a concise and comparative view of the three main cloud servi
 
 ## 11-Availablity
 
-| Availability (Nines) | Minimum VMs Required | Availability Zones Required | Downtime per Year | Description                                                         |
-|----------------------|----------------------|-----------------------------|-------------------|---------------------------------------------------------------------|
-| 99% (Two Nines)      | 2                    | 1                           | 3.65 days         | VMs can be in the same Zone; less focus on high availability.       |
-| 99.9% (Three Nines)  | 2                    | 1+                          | 8.76 hours        | VMs should ideally be in separate Fault Domains within a Zone.      |
-| 99.99% (Four Nines)  | 2+                   | 2+                          | 52.56 minutes     | VMs must be across multiple Availability Zones to ensure high availability and fault tolerance. |
+| Availability (Nines) | Minimum VMs Required | Availability Zones Required | Downtime per Year | Description                                                                                              |
+| -------------------- | -------------------- | --------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------- |
+| 99% (Two Nines)      | 2                    | 1                           | 3.65 days         | VMs can be in the same Zone; less focus on high availability.                                            |
+| 99.9% (Three Nines)  | 2                    | 1+                          | 8.76 hours        | VMs should ideally be in separate Fault Domains within a Zone.                                           |
+| 99.99% (Four Nines)  | 2+                   | 2+                          | 52.56 minutes     | VMs must be across multiple Availability Zones to ensure high availability and fault tolerance.          |
 | 99.999% (Five Nines) | 3+                   | 3+                          | 5.26 minutes      | Multiple VMs across all available Availability Zones in a region are recommended for maximum resilience. |
 
 ### Key Considerations:
+
 - **VMs Count:** Increasing the number of VMs can enhance fault tolerance and load distribution, which is crucial for maintaining high availability.
 - **Availability Zones:** Distributing VMs across multiple Availability Zones protects against zone-level failures. Each zone contains one or more data centers equipped with independent power, cooling, and networking.
 - **SLA Calculation:** Azure provides an SLA for Virtual Machines that have two or more instances deployed in the same Availability Set or Virtual Machine Scale Set in at least two Availability Zones. The SLA for a single instance VM with premium storage is lower but can be enhanced with additional instances and proper configuration.
 - **Additional Resources:** Utilizing Azure services like Azure Site Recovery and Azure Backup, along with strategic placement of VMs, helps in achieving higher SLAs.
 
+# Comprehensive Guide to Azure Tools and Services for AZ-900 Certification
+
+## Compute
+
+| Azure Tools                    | Description                                                 | Link                                                                                 |
+| ------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Azure Virtual Machines         | Provides scalable computing resources in the cloud.         | [Azure Virtual Machines](https://azure.microsoft.com/services/virtual-machines/)     |
+| Azure App Service              | A platform for building, deploying, and scaling web apps.   | [Azure App Service](https://azure.microsoft.com/services/app-service/)               |
+| Azure Functions                | A serverless compute service for running event-driven code. | [Azure Functions](https://azure.microsoft.com/services/functions/)                   |
+| Azure Kubernetes Service (AKS) | Simplifies deploying, managing, and operating Kubernetes.   | [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) |
+
+## Networking
+
+| Azure Tools                       | Description                                                                 | Link                                                                                                        |
+| --------------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Azure Virtual Network             | Enables secure communications between Azure resources.                      | [Azure Virtual Network](https://azure.microsoft.com/services/virtual-network/)                              |
+| Azure Load Balancer               | Distributes inbound traffic to Azure resources to ensure high availability. | [Azure Load Balancer](https://azure.microsoft.com/services/load-balancer/)                                  |
+| Azure Traffic Manager             | Routes incoming traffic for high performance and availability.              | [Azure Traffic Manager](https://azure.microsoft.com/services/traffic-manager/)                              |
+| Network Security Groups (NSG)     | Filters network traffic to and from Azure resources.                        | [Network Security Groups](https://docs.microsoft.com/azure/virtual-network/security-overview)               |
+| Application Security Groups (ASG) | Enables grouping of VMs and network interfaces in the same virtual network. | [Application Security Groups](https://docs.microsoft.com/azure/virtual-network/application-security-groups) |
+
+## Storage
+
+| Azure Tools        | Description                                                          | Link                                                                      |
+| ------------------ | -------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| Azure Blob Storage | Massively scalable object storage for any type of unstructured data. | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/) |
+| Azure File Storage | Managed file shares for cloud or on-premises deployments.            | [Azure File Storage](https://azure.microsoft.com/services/storage/files/) |
+| Azure Disk Storage | High-performance, durable block storage for Azure VMs.               | [Azure Disk Storage](https://azure.microsoft.com/services/storage/disks/) |
+
+## Databases
+
+| Azure Tools                   | Description                                                                                                            | Link                                                                              |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Azure SQL Database            | A fully managed relational database with auto-scale, integrated intelligence, and robust security.                     | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)          |
+| Azure Cosmos DB               | A globally distributed database service that allows you to elastically and independently scale throughput and storage. | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)                |
+| Azure Database for MySQL      | A fully managed database service for app development and deployment that supports MySQL.                               | [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)           |
+| Azure Database for PostgreSQL | A fully managed database service for app development and deployment that supports PostgreSQL.                          | [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) |
+
+## Identity and Security
+
+| Azure Tools                  | Description                                                                                  | Link                                                                                     |
+| ---------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Azure Active Directory       | Microsoft’s cloud-based identity and access management service.                              | [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)         |
+| Azure Key Vault              | Manages and protects cryptographic keys and other secrets.                                   | [Azure Key Vault](https://azure.microsoft.com/services/key-vault/)                       |
+| Azure Security Center        | Provides unified security management and advanced threat protection.                         | [Azure Security Center](https://azure.microsoft.com/services/security-center/)           |
+| Microsoft Defender for Cloud | Offers extended security management and threat protection across hybrid cloud workloads.     | [Microsoft Defender for Cloud](https://azure.microsoft.com/services/defender-for-cloud/) |
+| Azure Policy                 | Helps enforce organizational standards and assess compliance at scale.                       | [Azure Policy](https://azure.microsoft.com/services/policy/)                             |
+| Microsoft Purview            | A unified data governance service that manages and governs on-premises and multi-cloud data. | [Microsoft Purview](https://azure.microsoft.com/services/purview/)                       |
+| Identity Security Score      | Evaluates and enhances the security posture of Azure identities.                             | [Identity Security Score](https://azure.microsoft.com/)                                  |
+
+## Management and Governance
+
+| Azure Tools            | Description                                                                | Link                                                                             |
+| ---------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Azure Monitor          | Collects and analyzes telemetry to ensure performance and availability.    | [Azure Monitor](https://azure.microsoft.com/services/monitor/)                   |
+| Azure Advisor          | Provides personalized recommendations to optimize Azure deployments.       | [Azure Advisor](https://azure.microsoft.com/services/advisor/)                   |
+| Azure Service Health   | Offers personalized alerts and guidance for Azure service issues.          | [Azure Service Health](https://azure.microsoft.com/services/service-health/)     |
+| Azure Automation       | Automates cloud management tasks to reduce errors and increase efficiency. | [Azure Automation](https://azure.microsoft.com/services/automation/)             |
+| Azure Resource Manager | Manages Azure resources through a consistent management layer.             | [Azure Resource Manager](https://azure.microsoft.com/features/resource-manager/) |
+| Azure Cost Management  | Helps monitor, allocate, and optimize cloud costs.                         | [Azure Cost Management](https://azure.microsoft.com/services/cost-management/)   |
+| Azure Arc              | Extends Azure management and services to any infrastructure.               | [Azure Arc](https://azure.microsoft.com/services/azure-arc/)                     |
+
+## AI and Machine Learning
+
+| Azure Tools              | Description                                                                                           | Link                                                                                 |
+| ------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Azure Machine Learning   | A platform for training, deploying, managing ML models.                                               | [Azure Machine Learning](https://azure.microsoft.com/services/machine-learning/)     |
+| Azure Cognitive Services | APIs that allow systems to see, hear, speak, and interpret needs using natural communication methods. | [Azure Cognitive Services](https://azure.microsoft.com/services/cognitive-services/) |
+
+## Internet of Things (IoT)
+
+| Azure Tools       | Description                                                                                       | Link                                                                   |
+| ----------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Azure IoT Hub     | A central message hub for bi-directional communication between IoT application and devices.       | [Azure IoT Hub](https://azure.microsoft.com/services/iot-hub/)         |
+| Azure IoT Central | A fully managed global IoT SaaS solution that is easy to connect, monitor, and manage IoT assets. | [Azure IoT Central](https://azure.microsoft.com/services/iot-central/) |
+
+## DevOps and Developer Tools
+
+| Azure Tools        | Description                                                                  | Link                                                                     |
+| ------------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Azure DevOps       | Provides collaboration tools for software development teams.                 | [Azure DevOps](https://azure.microsoft.com/services/devops/)             |
+| Azure DevTest Labs | Enables quick creation of environments in Azure for development and testing. | [Azure DevTest Labs](https://azure.microsoft.com/services/devtest-labs/) |
+
+## Cloud Types
+
+| Cloud Type    | Description                                                               | Link                                          |
+| ------------- | ------------------------------------------------------------------------- | --------------------------------------------- |
+| Public Cloud  | Services delivered over the public internet and available to anyone.      | [Public Cloud](https://azure.microsoft.com/)  |
+| Private Cloud | Cloud infrastructure operated solely for a single organization.           | [Private Cloud](https://azure.microsoft.com/) |
+| Hybrid Cloud  | A combination of public and private clouds, bound together by technology. | [Hybrid Cloud](https://azure.microsoft.com/)  |
+
+## Pricing and Cost Management
+
+| Azure Tools        | Description                                         | Link                                                                  |
+| ------------------ | --------------------------------------------------- | --------------------------------------------------------------------- |
+| Pricing Calculator | Tool for estimating the costs of Azure services.    | [Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) |
+| TCO Calculator     | Estimates the cost savings when migrating to Azure. | [TCO Calculator](https://azure.microsoft.com/pricing/tco-calculator/) |
+
+## Trust and Compliance
+
+| Azure Tools          | Description                                                                               | Link                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Service Trust Portal | Provides detailed information on Microsoft's security, privacy, and compliance practices. | [Service Trust Portal](https://servicetrust.microsoft.com/) |
+
+## Health and Monitoring
+
+| Azure Tools          | Description                                                             | Link                                                                         |
+| -------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Azure Service Health | Offers personalized alerts and guidance for Azure service issues.       | [Azure Service Health](https://azure.microsoft.com/services/service-health/) |
+| Azure Monitor        | Collects and analyzes telemetry to ensure performance and availability. | [Azure Monitor](https://azure.microsoft.com/services/monitor/)               |
+
+This comprehensive guide covers essential Azure tools and services categorized for easier reference. It is designed to help you prepare for the Azure AZ-900 certification.
