@@ -58,12 +58,12 @@
       {
         "name": "electron app",
         "description": "react + vite + electron",
-        "link": "web/react/react-electron-app"
+        "link": "web/react/react-electron-app.md"
       },
       {
         "name": "tauri app",
         "description": "react + vite + tauri",
-        "link": "web/react/react-tauri-app"
+        "link": "web/react/react-tauri-app.md"
       },
       {
         "name": "containers",
