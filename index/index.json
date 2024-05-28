@@ -58,12 +58,12 @@
       {
         "name": "electron app",
         "description": "react + vite + electron",
-        "link": "web/react/react-electron-app.md"
+        "link": "https://raw.githubusercontent.com/jpothanc/react-electron-desktop-app/main/README.md"
       },
       {
         "name": "tauri app",
         "description": "react + vite + tauri",
-        "link": "web/react/react-tauri-app.md"
+        "link": "https://raw.githubusercontent.com/jpothanc/react-tauri-desktop-app/main/README.md"
       },
       {
         "name": "containers",
