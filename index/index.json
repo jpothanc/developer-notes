@@ -56,6 +56,16 @@
     ],
     "web": [
       {
+        "name": "electron app",
+        "description": "react + vite + electron",
+        "link": "web/react/react-electron-app"
+      },
+      {
+        "name": "tauri app",
+        "description": "react + vite + tauri",
+        "link": "web/react/react-tauri-app"
+      },
+      {
         "name": "containers",
         "description": "flex,grids,etc",
         "link": "web-styling/css/css_containers.md"
@@ -68,17 +78,17 @@
       {
         "name": "react-hooks",
         "description": "useState, useEffect, useMemo....",
-        "link": "web/react-hooks.md"
+        "link": "web/react/react-hooks.md"
       },
       {
         "name": "react-fetch",
         "description": "fetch api usage in react",
-        "link": "web/react-fetch.md"
+        "link": "web/react/react-fetch.md"
       },
       {
         "name": "react-notes",
         "description": "react concepts to remember",
-        "link": "web/react-notes.md"
+        "link": "web/react/react-notes.md"
       }
     ],
     "java": [
