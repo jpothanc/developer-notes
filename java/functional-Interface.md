@@ -1,16 +1,13 @@
 # Java Functional Interfaces Cheat Sheet
 
-## Overview
-
 Java functional interfaces are interfaces with a single abstract method, which can be implemented using lambda expressions, method references, or anonymous classes. They are the backbone of functional programming in Java.
 
-| Functional Interface | Description                                      | Method Signature     |
-|----------------------|--------------------------------------------------|----------------------|
-| Predicate            | Takes one input and returns a boolean.           | `boolean test(T t);` |
-| Consumer             | Takes one input and returns nothing (void).      | `void accept(T t);`  |
-| Function             | Takes one input and returns a result.            | `R apply(T t);`       |
-| Supplier             | Takes no input and returns a result.             | `T get();`            |
-
+| Functional Interface | Description                                 | Method Signature     |
+| -------------------- | ------------------------------------------- | -------------------- |
+| Predicate            | Takes one input and returns a boolean.      | `boolean test(T t);` |
+| Consumer             | Takes one input and returns nothing (void). | `void accept(T t);`  |
+| Function             | Takes one input and returns a result.       | `R apply(T t);`      |
+| Supplier             | Takes no input and returns a result.        | `T get();`           |
 
 ## Predicate
 
