@@ -115,7 +115,7 @@
       {
         "name": "lamdas",
         "description": "functional interfaces...",
-        "link": "default.md"
+        "link": "java/functional-Interface.md"
       }
     ],
     ".net": [
