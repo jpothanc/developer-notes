@@ -322,6 +322,11 @@
         "name": "markdown",
         "description": "markdown syntax",
         "link": "others/markdown.md"
+      },
+      {
+        "name": "openai",
+        "description": "chating with openai",
+        "link": "ai/open-ai-chat.md"
       }
     ]
   }
