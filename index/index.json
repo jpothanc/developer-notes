@@ -49,6 +49,11 @@
         "link": "blank.md"
       },
       {
+        "name": "ai",
+        "bgColor": "#800080",
+        "link": "blank.md"
+      },
+      {
         "name": "others",
         "bgColor": "#006064",
         "link": "blank.md"
@@ -322,7 +327,9 @@
         "name": "markdown",
         "description": "markdown syntax",
         "link": "others/markdown.md"
-      },
+      }
+    ],
+    "ai": [
       {
         "name": "openai",
         "description": "chating with openai",
