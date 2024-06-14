@@ -177,6 +177,11 @@
         "name": "function declarations",
         "description": "function declarations in ts",
         "link": "javascript/function-declarations.md"
+      },
+      {
+        "name": "best practices",
+        "description": "best practices in ts",
+        "link": "javascript/best-practices.md"
       }
     ],
     "testing": [
