@@ -40,3 +40,39 @@ if (typeof value === "string") {
 }
 
 ```
+
+# Handling Errors
+
+```javascript
+export const sendEmail = async () => {
+  try {
+    await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: "jpothanc@gmail.com",
+      subject: "Message from contact form",
+      html: "<p>Hello</p>",
+    });
+  } catch (error) {
+    return {
+      message: getErrorMessage(error),
+    };
+  }
+};
+
+const getErrorMessage = (error: unknown): string => {
+  let message: string;
+
+  if (error instanceof Error) {
+    message = error.message;
+  } else if (error && typeof error === "object" && "message" in error) {
+    message = String(error.message);
+  } else if (typeof error === "string") {
+    message = error;
+  } else {
+    message = "Something went wrong.";
+  }
+
+  return message;
+};
+
+```
