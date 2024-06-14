@@ -334,6 +334,11 @@
         "name": "openai",
         "description": "chating with openai",
         "link": "ai/open-ai-chat.md"
+      },
+      {
+        "name": "personal ai assistant",
+        "description": "rag-openai-chroma",
+        "link": "rag-openai-chroma.md"
       }
     ]
   }
