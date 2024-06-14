@@ -338,7 +338,7 @@
       {
         "name": "personal ai assistant",
         "description": "rag-openai-chroma",
-        "link": "rag-openai-chroma.md"
+        "link": "ai/rag-openai-chroma.md"
       }
     ]
   }
