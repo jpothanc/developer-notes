@@ -338,11 +338,11 @@
         "description": "docker in windows",
         "link": "others/docker.md"
       },
-       {
-         "name": "curl",
-         "description": "curl commands",
-         "link": "others/docker.md"
-       }
+      {
+        "name": "curl",
+        "description": "curl commands",
+        "link": "others/curl.md"
+      }
     ],
     "ai": [
       {
