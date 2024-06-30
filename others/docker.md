@@ -111,7 +111,7 @@ CMD ["java", "-jar", "app.jar"]
 
 ## Sample batch file for businding, tagging and pushing the docker image
 
-```sh
+```bat
 @echo off
 setlocal enabledelayedexpansion
 
