@@ -109,7 +109,7 @@ EXPOSE 7070
 CMD ["java", "-jar", "app.jar"]
 ```
 
-## Sample batch file for businding, tagging and pushing the docker image
+## Sample batch file for binding, tagging and pushing the docker image
 
 ```bat
 @echo off
