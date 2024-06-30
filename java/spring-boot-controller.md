@@ -59,7 +59,60 @@ public class GreetingController {
 
 ```
 
-Using Reactive Core:
+## Reactive Web Programming with Spring
+
+# Reactive Web Programming with Spring
+
+## Introduction
+
+- **Reactive Programming**: Emphasizes asynchronous and non-blocking data streams.
+- **Spring WebFlux**: Reactive web framework in Spring for building scalable and efficient applications.
+
+## Key Concepts
+
+### Mono
+
+- **Definition**: Represents a reactive type in Spring for emitting at most one item.
+- **Use Case**: Ideal for scenarios where you expect zero or one result, such as fetching a single resource asynchronously.
+
+### Flux
+
+- **Definition**: Represents a reactive type in Spring for emitting zero to N items.
+- **Use Case**: Suitable for streaming multiple results or continuous data, enabling asynchronous data processing.
+
+### **Schedulers**:
+
+Manage the execution of reactive streams across threads.
+
+- **Schedulers.immediate()** : Executes tasks immediately on the current thread, without scheduling.
+
+- **Schedulers.single()** : Uses a single thread for executing tasks sequentially, ensuring
+  non-blocking behavior without context switches.
+
+- **Schedulers.parallel()** : Maintains a fixed pool of threads to execute tasks concurrently.
+  Optimized for CPU-bound operations or parallel processing.
+
+- **Schedulers.elastic()** : Dynamically creates threads as needed. Suitable for I/O-bound operations
+  where tasks may block temporarily.
+
+## Dependencies
+
+- **spring-boot-starter-webflux**: Includes necessary dependencies for Spring WebFlux.
+- **reactor-core**: Core library for reactive programming with Project Reactor.
+
+## Benefits
+
+- **Scalability**: Handles concurrent requests efficiently.
+- **Performance**: Reduces resource consumption with non-blocking I/O.
+
+## Considerations
+
+- **Error Handling**: Use `onErrorResume` and `onErrorReturn` to handle errors in reactive streams.
+- **Testing**: Utilize `StepVerifier` for testing reactive components.
+
+## Conclusion
+
+Reactive web programming with Spring WebFlux enables high-performance, asynchronous applications suitable for modern web development.
 
 ```java
 import org.springframework.web.bind.annotation.*;
@@ -69,16 +122,25 @@ import reactor.core.publisher.Mono;
 public class UserController {
 
     //Mono is used to handle asynchronous, potentially non-blocking operations
-    //Use dependany reactor-core
     @GetMapping("/queryUsers")
-    public Mono<ResponseEntity<QueryResponse>> getUers(@ModelAttribute QueryRequest request) {
-        
-        return Mono.fromFuture(() -> catalogueService.queryCatalogueItem(request))
+    public Mono<ResponseEntity<QueryResponse>> getUsers(@ModelAttribute QueryRequest request) {
+
+        return Mono.fromFuture(() -> catalogueService.queryUser(request))
                 .map(ResponseEntity::ok)
-                .onErrorResume(NoSuchElementException.class, 
+                .onErrorResume(NoSuchElementException.class,
                     e -> QueryResponse.notFound(request, e.getMessage(), HttpStatus.NOT_FOUND))
                 .onErrorResume(Exception.class,
                      e -> QueryResponse.badRequest(request, e.getMessage(), HttpStatus.BAD_REQUEST));
+    }
+
+    @GetMapping("/{userId}")
+    public Mono<ResponseEntity<User>> getUserById(@PathVariable String userId) {
+        //converting synchronous operations into asynchronous ones
+        return Mono.fromCallable(() -> userService.getUserById(userId))
+                   .subscribeOn(Schedulers.elastic())
+                   .map(user -> ResponseEntity.ok(user))
+                   .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()))
+                   .onErrorResume(e -> Mono.just(ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build()));
     }
 }
 ```
