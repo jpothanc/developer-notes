@@ -72,17 +72,13 @@ public class UserController {
     //Use dependany reactor-core
     @GetMapping("/queryUsers")
     public Mono<ResponseEntity<QueryResponse>> getUers(@ModelAttribute QueryRequest request) {
-
-        try {
-            var response = catalogueService.queryCatalogueItem(request).join();
-            return Mono.just(ResponseEntity.ok(response));
-
-        } catch (NoSuchElementException e) {
-            return Mono.just(QueryResponse.notFound(request, e.getMessage(), HttpStatus.NOT_FOUND));
-
-        } catch (Exception e) {
-            return Mono.just(QueryResponse.badRequest(request, e.getMessage(), HttpStatus.BAD_REQUEST));
-        }
+        
+        return Mono.fromFuture(() -> catalogueService.queryCatalogueItem(request))
+                .map(ResponseEntity::ok)
+                .onErrorResume(NoSuchElementException.class, 
+                    e -> QueryResponse.notFound(request, e.getMessage(), HttpStatus.NOT_FOUND))
+                .onErrorResume(Exception.class,
+                     e -> QueryResponse.badRequest(request, e.getMessage(), HttpStatus.BAD_REQUEST));
     }
 }
 ```
