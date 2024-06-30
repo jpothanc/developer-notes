@@ -121,6 +121,16 @@
         "name": "lamdas",
         "description": "functional interfaces...",
         "link": "java/functional-Interface.md"
+      },
+      {
+        "name": "spring-controller",
+        "description": "spring-controller concepts",
+        "link": "java/spring-boot-controller.md"
+      },
+      {
+        "name": "spring-configs",
+        "description": "spring useful configs",
+        "link": "java/spring-boot-configs.md"
       }
     ],
     ".net": [
