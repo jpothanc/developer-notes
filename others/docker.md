@@ -167,15 +167,15 @@ endlocal
 
 ```
 
-```sh
-# Use this command to run
+```bat
+REM Use this command to run
 .\build.bat 1.0
 ```
 
 ## Running the docker image
 
-```sh
-# 7070 is the application configures port. For e.g server.port=7070 setting in Spring Boot
-# 8070 is the port number on host
+```bat
+REM 7070 is the application configures port. For e.g server.port=7070 setting in Spring Boot
+REM 8070 is the port number on host
 docker run -p 8070:7070 kaljessy/rcengine:1.0
 ```
