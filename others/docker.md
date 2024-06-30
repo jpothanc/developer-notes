@@ -70,10 +70,10 @@
 ## Running
 
 ```sh
-# -p 8007:8080: This option maps a port on the host to a port in the container.
+# -p 8070:7070: This option maps a port on the host to a port in the container.
 
-# The first 8007 is the port number on the host (your machine).
-# The second 8080 is the port number inside the container.
+# The first 8070 is the port number on the host (your machine).
+# The second 7070 is the port number inside the container or application configured port.
 # This means that any traffic sent to port 8007 on the host will be forwarded to port 8080 in the container.
 # kaljessy/rcengine:1.0: This specifies the Docker image to use for the container and its tag.
 
@@ -107,4 +107,75 @@ EXPOSE 7070
 
 # Command to run the Spring Boot application when the container starts
 CMD ["java", "-jar", "app.jar"]
+```
+
+## Sample batch file for businding, tagging and pushing the docker image
+
+```sh
+@echo off
+setlocal enabledelayedexpansion
+
+REM Check if all arguments are provided
+if "%~1"=="" (
+    echo Version is not provided
+    echo Usage: deploy.bat ^<version^>
+    exit /b 1
+)
+
+set "version=%~1"
+
+REM Docker Username and Password should be provided as environment variables
+echo setting DOCKER_USERNAME and DOCKER_PASSWORD from environment variables
+set Username=%DOCKER_USERNAME%
+if %Username%=="" (
+    echo DOCKER_USERNAME is not provided in environment variable
+    exit /b 1
+)
+set Password=%DOCKER_PASSWORD%
+if %Password%=="" (
+    echo DOCKER_PASSWORD is not provided in environment variable
+    exit /b 1
+)
+
+REM Debugging output to console
+echo Version: %version%
+echo Username: %username%
+
+
+REM build the project
+@REM echo Building the project using Gradle...
+@REM ./gradlew clean build -x test --warning-mode=all
+@REM echo Completed building the project using Gradle...
+
+REM Build the Docker image
+echo Building the Docker image
+docker build -t rcengine:%version% .
+
+REM Tag the Docker image
+echo Tagging the Docker image
+docker tag rcengine:%version% %username%/rcengine:%version%
+
+REM Log in to Docker
+echo Logging in to Docker
+echo %password% | docker login --username %username% --password-stdin
+
+REM Push the Docker image
+echo Pushing docker image
+docker push %username%/rcengine:%version%
+
+endlocal
+
+```
+
+```sh
+# Use this command to run
+.\build.bat 1.0
+```
+
+## Running the docker image
+
+```sh
+# 7070 is the application configures port. For e.g server.port=7070 setting in Spring Boot
+# 8070 is the port number on host
+docker run -p 8070:7070 kaljessy/rcengine:1.0
 ```
