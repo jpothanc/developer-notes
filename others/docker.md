@@ -34,24 +34,30 @@
 
 ## Login
 
-- `docker login`: Log in to a Docker registry.
+```bat
 
-  - `echo "your-password" | docker login --username your-username --password-stdin`
+docker login: Log in to a Docker registry.
 
-- `docker logout`: Log out from a Docker registry.
+REM echo "your-password" | docker login --username your-username --password-stdin
+
+docker logout: Log out from a Docker registry.
+```
 
 ## Create an Image and Push
 
-- `docker build -t <image_name> .`: Build an image from the Dockerfile in the current directory.
+```bat
 
-  - Example: `docker build -t my_image:<tag> .`(docker build -t rcengine:1.0 .)
+docker build -t <image_name> .: Build an image from the Dockerfile in the current directory.
 
-- `docker tag <image_name> <repository>/<image_name>:<tag>`: Tag an image to a repository.
+REM Example: `docker build -t my_image:<tag> .`(docker build -t rcengine:1.0 .)
 
-  - Example: `docker tag my_image my_repo/my_image:v1`(docker tag rcengine:1.0 kaljessy/rcengine:1.0)
+docker tag <image_name> <repository>/<image_name>:<tag>: Tag an image to a repository.
 
-- `docker push <repository>/<image_name>:<tag>`: Push an image to a repository.
-  - Example: `docker push my_repo/my_image:v1`(docker push kaljessy/rcengine:1.0)
+REM Example: docker tag my_image my_repo/my_image:v1`(docker tag rcengine:1.0 kaljessy/rcengine:1.0)
+
+docker push <repository>/<image_name>:<tag>: Push an image to a repository.
+REM  Example: `docker push my_repo/my_image:v1`(docker push kaljessy/rcengine:1.0)
+```
 
 ## Docker Commands for Managing Running Containers
 
