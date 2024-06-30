@@ -4,9 +4,13 @@ Swagger is a set of open-source tools for building, documenting, and consuming R
 
 In the Java ecosystem, Swagger is often used in combination with Spring Boot to generate interactive API documentation and client libraries.
 
+Gradle:
+
 ```sh
 implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 ```
+
+Maven:
 
 ```sh
 <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui -->
