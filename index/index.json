@@ -124,12 +124,12 @@
       },
       {
         "name": "spring-controller",
-        "description": "spring-controller concepts",
+        "description": "controller concepts",
         "link": "java/spring-boot-controller.md"
       },
       {
         "name": "spring-configs",
-        "description": "spring useful configs",
+        "description": "useful configs",
         "link": "java/spring-boot-configs.md"
       }
     ],
