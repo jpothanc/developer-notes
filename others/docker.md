@@ -31,23 +31,6 @@
 5. **Start Docker if Not Running**:
    - If Docker is not running, you can start it using the following methods:
      - **From the Start Menu**: Search for "Docker Desktop" and click to start it.
-     - **From PowerShell**: Start Docker using the Windows service command:
-       ```sh
-       Start-Service docker
-       ```
-     - **From Command Prompt**: Start Docker using the `sc` command:
-       ```sh
-       sc start com.docker.service
-       ```
-     - **Check Docker Status**:
-       - **From PowerShell**:
-         ```sh
-         Get-Service docker
-         ```
-       - **From Command Prompt**:
-         ```sh
-         sc query com.docker.service
-         ```
 
 ## Login
 
@@ -87,7 +70,7 @@
 ## Running
 
 ```sh
-# -p 8080:8080: This option maps a port on the host to a port in the container.
+# -p 8007:8080: This option maps a port on the host to a port in the container.
 
 # The first 8007 is the port number on the host (your machine).
 # The second 8080 is the port number inside the container.
@@ -111,10 +94,13 @@ FROM amazoncorretto:19.0.2
 WORKDIR /app
 
 # Copy the Spring Boot application JAR file into the container
+#COPY target/*.jar app.jar
 COPY build/libs/*.jar app.jar
 
 # Expose the port that the Spring Boot application will run on
-EXPOSE 8080
+# This is just a instruction to the container, it doesn't actually publish the port
+# This should be identical to the port that the Spring Boot application is configured to run on
+EXPOSE 7070
 
 # Define environment variables (if needed)
 #ENV SPRING_PROFILES_ACTIVE=dev
