@@ -178,4 +178,14 @@ REM Use this command to run
 REM 7070 is the application configures port. For e.g server.port=7070 setting in Spring Boot
 REM 8070 is the port number on host
 docker run -p 8070:7070 kaljessy/rcengine:1.0
+
+REM -d: Runs the container in detached mode.
+REM  Allows you to start containers without blocking the current terminal session.
+REM Access to Logs: You can still access the container's logs using docker logs
+REM <container_id> to monitor its output and status.
+docker run -d -p 8070:7070 kaljessy/rcengine:1.0
+
+REM -e: Docker sets environment variables within the container environment as specified.
+docker run -d -p 8070:7070  -e APP_ENV=production -e LOG_LEVEL=info kaljessy/rcengine:1.0
+
 ```
