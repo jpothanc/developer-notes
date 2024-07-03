@@ -125,7 +125,7 @@ public class UserController {
     @GetMapping("/queryUsers")
     public Mono<ResponseEntity<QueryResponse>> getUsers(@ModelAttribute QueryRequest request) {
 
-        return Mono.fromFuture(() -> catalogueService.queryUser(request))
+        return Mono.fromFuture(() -> userService.queryUser(request))
                 .map(ResponseEntity::ok)
                 .onErrorResume(NoSuchElementException.class,
                     e -> QueryResponse.notFound(request, e.getMessage(), HttpStatus.NOT_FOUND))
