@@ -189,7 +189,7 @@ Backpressure refers to the situation where the rate of data production exceeds t
             });
 ```
 
-# An Example how to use in a function
+# An Example how to use this in a function
 
 ```java
  public  Observable<Order> dispatchOrder(String orderId) {
