@@ -188,3 +188,31 @@ Backpressure refers to the situation where the rate of data production exceeds t
                 TimeUnit.SECONDS.sleep(5);
             });
 ```
+
+# An Example how to use in a function
+
+```java
+ public  Observable<Order> dispatchOrder(String orderId) {
+
+    OrderService orderService = new OrderService();
+    return Observable.defer(() -> {
+                System.out.println("Fetching order: " + orderId + " on thread: " + Thread.currentThread().getName());
+                Order order = orderService.getOrder(orderId);
+                return Observable.just(order);
+            })
+            .subscribeOn(Schedulers.io()) // Fetch order on IO scheduler
+            .observeOn(Schedulers.computation())
+            .map(orderService::enrichOrder)
+            .map(orderService::performPayment)
+            .map(orderService::dispatchOrder)
+            .doOnNext(order -> {
+                System.out.println("Sending email for order: " + order.getId() + " on thread: " + Thread.currentThread().getName());
+                orderService.sendEmail(order);
+            })
+            .doOnError(error -> {
+                System.out.println("Error occurred on thread: " + Thread.currentThread().getName() + ": " + error.getMessage());
+            })
+            .doOnComplete(() -> System.out.println("Completed emission"))
+            .doFinally(() -> System.out.println("Observable completed"));
+}
+```
