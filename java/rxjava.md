@@ -3,12 +3,12 @@
 RxJava is a Java implementation of Reactive Extensions: a library that promotes a programming paradigm where data is treated as a stream of events. It embraces the Observer pattern, where you have an `Observable` that produces these data streams and an `Observer` (or `Subscriber`) that subscribes to, consumes, manipulates, and transforms these streams.RxJava supports asynchronous programming and provides powerful scheduling mechanisms to control the execution of these streams on different threads.
 One of its core features is the push model, where data is pushed to the subscribers as it becomes available, unlike the traditional pull model where data is pulled by the consumer on demand.
 
-## Key Concepts:
+### Key Concepts:
 
-1. **Observable**: Emits a sequence of data or events.
-2. **Observer**: Subscribes to and reacts to the data or events emitted by an Observable.
-3. **Operators**: Functions that allow you to transform, filter, and combine data streams.
-4. **Schedulers**: Control the execution context of an Observable, allowing you to specify which threads to use for processing data.
+- **Observable**: Emits a sequence of data or events.
+- **Observer**: Subscribes to and reacts to the data or events emitted by an Observable.
+- **Operators**: Functions that allow you to transform, filter, and combine data streams.
+- **Schedulers**: Control the execution context of an Observable, allowing you to specify which threads to use for processing data.
 
 ### Features:
 
