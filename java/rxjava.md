@@ -140,7 +140,7 @@ observable.doOnComplete(() -> logger.info("Observation complete"));
 
 ```
 
-`subscribeOn`
+**subscribeOn**
 The subscribeOn operator specifies the Scheduler (thread pool) on which the source Observable will operate. It determines the thread where the subscription to the Observable happens, as well as where the initial emissions occur.
 
 ```java
@@ -148,7 +148,7 @@ observable.subscribeOn(Schedulers.io())
           .subscribe(item -> logger.info("Received item on IO thread: " + item));
 ```
 
-`observeOn`
+**observeOn:**
 The observeOn operator specifies the Scheduler on which the Observer will observe emissions from the Observable. It controls the thread where downstream operations (like map, filter, etc.) and Observer callbacks (onNext, onError, onComplete) will be executed.
 
 ```java
@@ -156,7 +156,7 @@ observable.observeOn(Schedulers.newThread())
           .subscribe(item -> updateUI(item));
 ```
 
-`subscribe`
+**subscribe:**
 The subscribe method initiates the subscription to an Observable and defines how to handle emitted items, errors, and completion signals from the Observable.
 
 ```java
@@ -171,7 +171,7 @@ disposable.dispose();
 
 ```
 
-`doOnNext`
+**doOnNext:**
 The doOnNext operator allows you to perform a side-effect action for each emitted item from the Observable, without transforming the item itself. It is often used for logging, updating state, or triggering side effects.
 
 ```java
@@ -181,7 +181,7 @@ observable.doOnNext(item -> logger.info("Processing item: " + item))
 
 ```
 
-`onErrorReturn` and `onErrorResumeNext'
+**onErrorReturn and onErrorResumeNext**:
 The onErrorReturn operator handles errors by emitting a default item and then completing the Observable.
 
 ```java
@@ -226,7 +226,7 @@ observable
 
 ```
 
-## What is Backpressure and How to Handle It
+### What is Backpressure and How to Handle It
 
 Backpressure refers to the situation where the rate of data production exceeds the rate of data consumption downstream. This can lead to issues such as memory leaks, system instability, or data loss if not handled properly.
 
@@ -248,7 +248,7 @@ Backpressure refers to the situation where the rate of data production exceeds t
             });
 ```
 
-# An Example how to use this in a function
+### A Real world example
 
 ```java
  public  Observable<Order> dispatchOrder(String orderId) {
@@ -275,7 +275,7 @@ Backpressure refers to the situation where the rate of data production exceeds t
             .doFinally(() -> System.out.println("Observable completed"));
 }
 ```
-## How is the different from Java Streams?
+### How is the different from Java Streams?
 
 **RxJava** is suitable for scenarios where you need to handle asynchronous events, manage complex data flows, and control concurrency explicitly. It is ideal for reactive programming where the system responds to a continuous stream of events.
 
