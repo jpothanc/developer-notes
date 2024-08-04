@@ -33,12 +33,12 @@ This cheat sheet offers a quick reference for converting standard CSS properties
 
 ## Box Model
 
-| CSS Property      | CSS Values                         | Tailwind Utility                    | Description                                        |
-| ----------------- | ---------------------------------- | ----------------------------------- | -------------------------------------------------- | --- | --------------- | ------------------------------------------------------- | ------------------------------------- |
-| `width`, `height` | `<length>`, `<percentage>`, `auto` | `w-5`, `w-full`, `h-10`, `h-screen` | Sets the dimensions of an element.                 |
-| `padding`         | `<length>`, `<percentage>`         | `p-0`, `p-4`, `p-8`, etc.           | Sets the padding space on all sides of an element. |
-| `margin`          | `<length>`, `<percentage>`, `auto` | `m-0`, `m-4`, `m-auto`, etc.        | Sets the margin area around an element.            |
-| `border`          | `<border-width>                    |                                     | <border-style>                                     |     | <border-color>` | `border`, `border-2`, `border-solid`, `border-gray-500` | Defines the border around an element. |
+| CSS Property      | CSS Values                                        | Tailwind Utility                                        | Description                                        |
+| ----------------- | ------------------------------------------------- | ------------------------------------------------------- | -------------------------------------------------- |
+| `width`, `height` | `<length>`, `<percentage>`, `auto`                | `w-5`, `w-full`, `h-10`, `h-screen`                     | Sets the dimensions of an element.                 |
+| `padding`         | `<length>`, `<percentage>`                        | `p-0`, `p-4`, `p-8`, etc.                               | Sets the padding space on all sides of an element. |
+| `margin`          | `<length>`, `<percentage>`, `auto`                | `m-0`, `m-4`, `m-auto`, etc.                            | Sets the margin area around an element.            |
+| `border`          | `<border-width>,  <border-style>, <border-color>` | `border`, `border-2`, `border-solid`, `border-gray-500` | Defines the border around an element.              |
 
 ## Visual Effects
 
