@@ -250,8 +250,14 @@ import React, { useMemo, useState } from "react";
 
 function ExpensiveComponent({ number }) {
   const [count, setCount] = useState(0);
+  const [themeChange, setThemeChange] = useState(false); 
 
-  // Expensive calculation that runs only when 'number' changes
+   const expensiveCalculation = () => {
+    console.log("Calculating...");
+    return number * 2; // Simulating an expensive operation
+  };
+
+  
   const expensiveCalculation = useMemo(() => {
     console.log("Calculating...");
     return number * 2; // Simulating an expensive operation
@@ -262,6 +268,7 @@ function ExpensiveComponent({ number }) {
       <h1>Computed Value: {expensiveCalculation}</h1>
       <h2>Count: {count}</h2>
       <button onClick={() => setCount(count + 1)}>Increment Count</button>
+       <button onClick={() => setThemeChange(!themeChange)}>Toggle Theme Change</button>
     </div>
   );
 }

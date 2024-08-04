@@ -76,6 +76,11 @@
         "link": "web-styling/css/css_containers.md"
       },
       {
+        "name": "tailwind",
+        "description": "tailwind essentials",
+        "link": "web-styling/css/tailwind-essentials.md"
+      },
+      {
         "name": "layout-hacks",
         "description": "quick css layout hacks",
         "link": "web-styling/css/css_layout_hacks.md"
