@@ -2,12 +2,27 @@
 
 Java functional interfaces are interfaces with a single abstract method, which can be implemented using lambda expressions, method references, or anonymous classes. They are the backbone of functional programming in Java.
 
-| Functional Interface | Description                                 | Method Signature     |
-| -------------------- | ------------------------------------------- | -------------------- |
-| Predicate            | Takes one input and returns a boolean.      | `boolean test(T t);` |
-| Consumer             | Takes one input and returns nothing (void). | `void accept(T t);`  |
-| Function             | Takes one input and returns a result.       | `R apply(T t);`      |
-| Supplier             | Takes no input and returns a result.        | `T get();`           |
+## **Categories of Functional Interfaces**
+
+| **Category**        | **Functional Interface** | **Abstract Method**     | **Use Case**                  | 
+|----------------------|--------------------------|--------------------------|--------------------------------|
+| **Supplier**         | `Supplier<T>`           | `T get()`                | Provides a value.             |
+| **Consumer**         | `Consumer<T>`           | `void accept(T)`         | Consumes a value (e.g., logging). |
+| **BiConsumer**       | `BiConsumer<T, U>`      | `void accept(T, U)`      | Consumes two values.          |
+| **Predicate**        | `Predicate<T>`          | `boolean test(T)`        | Evaluates a condition.        |
+| **BiPredicate**      | `BiPredicate<T, U>`     | `boolean test(T, U)`     | Evaluates a condition for two values. |
+| **Function**         | `Function<T, R>`        | `R apply(T)`             | Transforms a value.           |
+| **BiFunction**       | `BiFunction<T, U, R>`   | `R apply(T, U)`          | Transforms two values.        |
+| **UnaryOperator**    | `UnaryOperator<T>`      | `T apply(T)`             | Special case of `Function` where input/output are the same type. |
+| **BinaryOperator**   | `BinaryOperator<T>`     | `T apply(T, T)`          | Special case of `BiFunction` where inputs/output are the same type. |
+
+**Memory Hook**: 
+- **Supplies**: `Supplier` (provides something).
+- **Consumes**: `Consumer` (takes something in).
+- **Predicates**: Conditions returning `boolean`.
+- **Functions**: Transformations (input → output).
+
+---
 
 ## Predicate
 
@@ -87,3 +102,10 @@ System.out.println(supplier.get()); // Output: Hello, Supplier!
 Supplier<Double> randomValue = () -> Math.random();
 System.out.println(randomValue.get()); // Output: Random value (e.g., 0.123456789)
 ```
+
+## Apply in Real Scenarios
+- Logging: Use Consumer.
+- Filtering: Use Predicate.
+- Value transformation: Use Function.
+- Lazy initialization: Use Supplier.
+
