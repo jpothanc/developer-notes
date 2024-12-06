@@ -23,11 +23,9 @@ Fix this by any of the below commands
 - echo 2097152 > /proc/sys/fs/file-max
 - sudo sh -c "echo 2097152 > /proc/sys/fs/file-max"
 
-8. In a different Ubuntu shell, run  ss -tulnp | grep ampServer to see connection
-   details of amps server.
+8. In a different Ubuntu shell, run  ss -tulnp | grep ampServer to see connection details of amps server.
 
-9. AMPS Web Monitoring or Management interface will be available at
-   http://localhost:8085/#/
+9. AMPS Web Monitoring or Management interface will be available at: http://localhost:8085/#/
 ```
 
 ## AMPS Server Started
