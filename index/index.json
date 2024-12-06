@@ -354,8 +354,8 @@
         "link": "others/docker.md"
       },
       {
-        "name": "amps-viewserver",
-        "description": "amps set up in Windoes using WSL",
+        "name": "amps-view-server",
+        "description": "amps set up in Windows using WSL",
         "link": "others/amps-view-server.md"
       },
       {
