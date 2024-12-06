@@ -354,6 +354,11 @@
         "link": "others/docker.md"
       },
       {
+        "name": "amps-viewserver",
+        "description": "amps set up in Windoes using WSL",
+        "link": "others/amps-view-server.md"
+      },
+      {
         "name": "curl",
         "description": "curl commands",
         "link": "others/curl.md"
