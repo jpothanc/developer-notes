@@ -95,3 +95,49 @@ client.logon()
 for message in client.subscribe("messages"):
     print(message.get_data())
 ```
+
+## SOW and Views
+
+```xml
+<SOW>
+<Topic>
+    <Name>orders</Name>
+    <MessageType>json</MessageType>
+    <Key>/order_id</Key>
+    <Durability>transient</Du
+    rability >
+</Topic>
+<View>
+    <Name>simple_order_view</Name>
+    <UnderlyingTopic>orders</UnderlyingTopic>
+    <MessageType>json</MessageType>
+    <Projection>
+        <Field>/order_id</Field>
+        <Field>/product</Field>
+        <Field>/quantity</Field>
+        <Field>/customer</Field>
+    </Projection>
+    <Select>/order_id, /product, /quantity</Select>
+    <Grouping>
+        <Field>/product</Field>
+    </Grouping>
+</View>
+
+<View>
+    <Name>aggregated_product_view</Name>
+    <UnderlyingTopic>orders</UnderlyingTopic>
+    <MessageType>json</MessageType>
+    <Projection>
+        <Field>/product</Field>
+        <Field>COUNT(/order_id) AS /completedOrders</Field>
+        <Field>SUM(/quantity) AS /totalQuantity</Field>
+    </Projection>
+    <Select>/order_id, /product, /quantity</Select>
+    <Grouping>
+    <Field>/product</Field>
+        <Field>/quantity</Field>
+    </Grouping>
+    <Filter>/status = 'complete'</Filter>
+</View>
+</SOW>
+```
