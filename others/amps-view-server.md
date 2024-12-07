@@ -116,10 +116,13 @@ for message in client.subscribe("messages"):
         <Field>/product</Field>
         <Field>/quantity</Field>
         <Field>/customer</Field>
+        <Field>/price</Field>
+        <!-- Formula columns. -->
+		<Field>SUM(/quantity * /price) AS /notional</Field>
     </Projection>
     <Select>/order_id, /product, /quantity</Select>
     <Grouping>
-        <Field>/product</Field>
+        <Field>/order_id</Field>
     </Grouping>
 </View>
 
@@ -129,12 +132,15 @@ for message in client.subscribe("messages"):
     <MessageType>json</MessageType>
     <Projection>
         <Field>/product</Field>
+        <!-- counts the underlying unique  orders in the aggregation. -->
         <Field>COUNT(/order_id) AS /completedOrders</Field>
+        <!-- aggregate the quantity based on unique products. -->
         <Field>SUM(/quantity) AS /totalQuantity</Field>
     </Projection>
     <Select>/order_id, /product, /quantity</Select>
+    <!-- Group by product and quantity. -->
     <Grouping>
-    <Field>/product</Field>
+        <Field>/product</Field>
         <Field>/quantity</Field>
     </Grouping>
     <Filter>/status = 'complete'</Filter>
