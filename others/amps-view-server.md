@@ -60,6 +60,7 @@ tcp   LISTEN 0      200             [::]:8085         [::]:*    users:(("ampServ
 1.Open Pycharm and create a new project called amps-server
 2 Install python amps client : pip install amps_python_client
 
+import json
 import AMPS
 import sys
 
@@ -67,10 +68,21 @@ uri_ = "tcp://localhost:9007/amps/json"
 
 client = AMPS.Client("examplePublisher")
 
+order_message = {
+    "order_id": "1000",
+    "product": "0005.HK",
+    "quantity": 1000,
+    "price": 50,
+    "customer": "Acme Corp",
+    "status": "NEW"
+}
+
 try:
     client.connect(uri_)
     client.logon()
-    client.publish("messages", '{ "hi" : "Hello, world!"}')
+    # client.publish("messages", '{ "hi" : "Hello, world!"}')
+    message_str = json.dumps(order_message)
+    client.publish("orders", message_str)
 
 except AMPS.AMPSException as e:
     sys.stderr.write(str(e))
@@ -92,8 +104,27 @@ client = Client("test")
 client.connect("tcp://127.0.0.1:9007/amps/json")
 client.logon()
 
-for message in client.subscribe("messages"):
+#for message in client.subscribe("messages"):
+    #print(message.get_data())
+
+from AMPS import Client, Message
+
+# Here, we create a Client object and connect to an AMPS server.
+client = Client("test")
+client.connect("tcp://127.0.0.1:9007/amps/json")
+client.logon()
+
+topic_name = "simple_order_view"
+
+# runs the SOW query, processes all of the messages
+# from the query, and then returns.
+for message in client.sow(topic_name):
+    if message.get_command() == Message.Command.SOW:
+        print(message.get_data())
+
+for message in client.subscribe(topic_name):
     print(message.get_data())
+
 ```
 
 ## SOW and Views
