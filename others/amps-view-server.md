@@ -73,6 +73,7 @@ order_message = {
     "product": "0005.HK",
     "quantity": 1000,
     "price": 50,
+    "desk": "sales",
     "customer": "Acme Corp",
     "status": "NEW"
 }
@@ -138,6 +139,16 @@ for message in client.subscribe(topic_name):
     <Durability>transient</Du
     rability >
 </Topic>
+
+ <!-- use conflated topic to provide updates every 5 second. -->
+<ConflatedTopic>
+    <Topic>ORDERS_CONFLATED</Topic>
+    <MessageType>json</MessageType>
+    <UnderlyingTopic>ORDERS</UnderlyingTopic>
+    <Interval>5s</Interval>
+    <Durability>transient</Durability >
+</ConflatedTopic>
+
 <View>
     <Name>simple_order_view</Name>
     <UnderlyingTopic>orders</UnderlyingTopic>
@@ -148,13 +159,16 @@ for message in client.subscribe(topic_name):
         <Field>/quantity</Field>
         <Field>/customer</Field>
         <Field>/price</Field>
+        <Field>/desk</Field>
         <!-- Formula columns. -->
-		<Field>SUM(/quantity * /price) AS /notional</Field>
+        <Field>SUM(/quantity * /price) AS /notional</Field>
     </Projection>
     <Select>/order_id, /product, /quantity</Select>
     <Grouping>
         <Field>/order_id</Field>
     </Grouping>
+    <!-- Filter orders for sales desk. -->
+    <Filter>/desk = 'sales'</Filter>
 </View>
 
 <View>
@@ -166,13 +180,12 @@ for message in client.subscribe(topic_name):
         <!-- counts the underlying unique  orders in the aggregation. -->
         <Field>COUNT(/order_id) AS /completedOrders</Field>
         <!-- aggregate the quantity based on unique products. -->
-        <Field>SUM(/quantity) AS /totalQuantity</Field>
+        <Field>SUM(ORDERS./quantity) AS /totalQuantity</Field>
     </Projection>
-    <Select>/order_id, /product, /quantity</Select>
     <!-- Group by product and quantity. -->
     <Grouping>
-        <Field>/product</Field>
-        <Field>/quantity</Field>
+        <Field>ORDERS./product</Field>
+        <Field>ORDERS./quantity</Field>
     </Grouping>
     <Filter>/status = 'complete'</Filter>
 </View>
