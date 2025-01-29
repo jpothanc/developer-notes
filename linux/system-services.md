@@ -1,5 +1,72 @@
 # Linux System services
 
+### **Default Behavior in Linux systemd**
+
+- **System Services**: Services created under `/etc/systemd/system/` are **system-wide services** and run independently of user sessions.
+- **User Context**: If you do not specify a user in the service file, the service runs as the `root` user by default.
+- **Persistence**: The service continues running even after the user who created or started it logs off.
+
+---
+
+### **How to Specify the Account for a Service**
+
+If you want the service to run under a specific user account (not `root`), you can use the `User` and `Group` directives in the `[Service]` section of your service file.
+
+**Create the Service File in a Temporary Directory**
+Create the service file in a temporary location like `/tmp`:
+
+```bash
+sudo nano /tmp/appservice.service
+sudo mv /tmp/appservice.service /etc/systemd/system/
+```
+
+#### Example:
+
+To run the service as a non-root user (e.g., `azureuser`):
+
+```ini
+[Unit]
+Description=AppService Hosting Example
+After=network.target
+
+[Service]
+User=azureuser
+Group=azureuser
+WorkingDirectory=/home/azureuser/programs/appservice
+ExecStart=/home/azureuser/programs/appservice/app.exe args
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
+```
+
+```bash
+sudo systemctl daemon-reload
+
+# Enable the Service to Run on Boot
+sudo systemctl enable appservice.service
+# Start the Service
+sudo systemctl start appservice.service
+# Verify the Service
+sudo systemctl status appservice.service
+# View the logs
+sudo journalctl -u appservice.service e
+
+```
+## Network Trouble shooting
+```bash
+# install netstat
+sudo apt install net-tools 
+
+sudo netstat -tuln | grep 3000
+sudo lsof -i :3000
+sudo ss -tuln | grep 3000
+
+sudo kill <PID>
+
+```
 
 ```bash
 # 1. List all services (active, inactive, and failed)
