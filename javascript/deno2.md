@@ -226,3 +226,45 @@ Deno now has LTS (Long Term Support), providing a stable and reliable version fo
 ## Jupiter Notebook Support
 
 Deno 2 now supports Jupyter Notebooks, enabling developers to run and interact with Deno code directly within a notebook environment. This integration makes it easier to write, test, and demonstrate Deno scripts in an interactive and visual format. Developers can use Jupyter to explore Deno's features, perform data analysis, or prototype applications while leveraging the notebook's rich output and visualization capabilities.
+
+```bash
+🚀 **Deno Built-in Tools & Commands** 🚀
+
+🛠 **Development & Code Quality**
+✅ `deno fmt`      → Format code
+✅ `deno lint`     → Lint code
+✅ `deno test`     → Run tests
+✅ `deno bench`    → Run benchmarks
+✅ `deno doc`      → Generate documentation
+
+📦 **Module & Dependency Management**
+✅ `deno info`     → Inspect dependencies
+✅ `deno cache`    → Cache modules
+✅ `deno vendor`   → Vendor dependencies
+✅ `deno lock`     → Manage lockfile
+
+🖥 **Execution & Compilation**
+✅ `deno run`      → Run a script
+✅ `deno task`     → Run task scripts
+✅ `deno repl`     → Open interactive REPL
+✅ `deno compile`  → Compile script into an executable
+
+🌍 **Security & Permissions**
+✅ `deno check`    → Type-check code
+✅ `deno permissions` → Inspect/set runtime permissions
+
+🚀 **Deployment & Debugging**
+✅ `deno bundle`   → Bundle files into one
+✅ `deno install`  → Install scripts as CLI tools
+✅ `deno uninstall` → Remove installed scripts
+✅ `deno upgrade`  → Upgrade Deno to the latest version
+
+🔍 **System & Environment**
+✅ `deno version`  → Show Deno version
+✅ `deno help`     → Show help for commands
+✅ `deno completions` → Generate shell completions
+✅ `deno upgrade`  → Upgrade to latest version
+
+🔋 **All-in-One, No External Dependencies Needed!** 🔋
+
+```
